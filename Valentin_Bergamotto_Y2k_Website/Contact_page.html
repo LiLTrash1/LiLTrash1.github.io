@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Index</title>
+<link href="Style sheet.css" rel="stylesheet">
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+</head>
+
+<body>
+	<script>
+				/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+		function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+		} 
+	</script>
+	<header>
+		<div class="text-area-header">
+			<div class="logo">
+				<img src="Images/Logo.png" alt="logo" width="150" height="150" /> 
+			</div>
+			<h2>Angelic Y2k Outfits</h2>
+		</div>
+
+		<div class="topnav" id="myTopnav">
+			<a href="Index.html">Home</a>
+			<a href="Womens_page.html">Womens</a>
+			<a href="Mens_page.html">Mens</a>
+			<a href="Why_Us_About_page.html">Why us?</a>
+			<a class="active" href="Contact_page.html">Contact us</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	</header>
+	
+	<main>
+		<div class="container">
+			<form action="https://formspree.io/f/mpzejjde" method="post">
+			  	<div class="row">
+					<div class="col-25">
+						<label for="fname">First Name</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="fname" name="firstname" required="required" placeholder="Your name..">
+					</div>
+			  	</div>
+			  	<div class="row">
+					<div class="col-25">
+						<label for="lname">Last Name</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="lname" name="lastname" required="required" placeholder="Your last name..">
+					</div>
+			  	</div>
+			  	<div class="row">
+					<div class="col-25">
+						<label for="email">Email</label>
+					</div>
+					<div class="col-75">
+						<input type="text" id="email" name="Email" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="Your email is..">
+					</div>
+			  	</div>
+				  <div class="row">
+					<div class="col-25">
+						<label for="subject">Subject</label>
+					</div>
+					<div class="col-75">
+						<input type="text" STYLE="color: #d32e2e"; id="Subject" name="subject" required="required" placeholder="Write something..">
+					</div>
+			  	</div>
+			  	<div class="row">
+					<div class="col-25">
+						<label for="message">Message</label>
+					</div>
+					<div class="col-75">
+						<textarea id="Message" name="message" required="required" placeholder="Write something.." style="height:200px"></textarea>
+					</div>
+			  	</div>
+				<div class="row">
+					<input type="submit" value="Submit">
+			  	</div>
+			</form>
+		</div> 
+	</main>
+	
+	<footer>
+		
+		<div class="image-left">
+			<img src="Images/Logo.png" height="100px" width="100px"/> 
+      	</div>
+		
+		  <div class="footer-text">
+			<h2>Get In Touch</h2>
+			<h3>support@angelicY2kOutfits.com</h3>
+		</div>
+	</footer>
+	<div class="social-align">
+			<!-- Add font awesome icons -->
+			<a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+			<a href="https://www.twitter.com/" target="_blank" class="fa fa-twitter"></a>
+
+			<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+		</div>
+</body>
+</html>
