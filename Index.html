@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Index</title>
+<link href="Style sheet.css" rel="stylesheet">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+
+<body>
+	<script>
+				/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+		function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+		} 
+
+		let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+} 
+	</script>
+	<header>
+		<div class="text-area-header">
+			<div class="logo">
+				<img src="Images/Logo.png" alt="logo" width="150" height="150" /> 
+			</div>
+			<h2>Angelic Y2k Outfits</h2>
+		</div>
+
+		<div class="topnav" id="myTopnav">
+			<a class="active" href="Index.html">Home</a>
+			<a href="Womens_page.html">Womens</a>
+			<a href="Mens_page.html">Mens</a>
+			<a href="Why_Us_About_page.html">Why us?</a>
+			<a href="Contact_page.html">Contact us</a>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	</header>
+	
+	<main>
+
+		 <!-- Container for the image gallery -->
+<div class="container" >
+
+	<!-- Full-width images with number text -->
+	<div class="mySlides">
+	  <div class="numbertext">1 / 6</div>
+		<img src="Images/Main1.png" style="width:100%">
+	</div>
+  
+	<div class="mySlides">
+	  <div class="numbertext">2 / 6</div>
+		<img src="Images/Main 2.png" style="width:100%">
+	</div>
+  
+	<div class="mySlides">
+	  <div class="numbertext">3 / 6</div>
+		<img src="Images/Main3.png" style="width:100%">
+	</div>
+  
+	<div class="mySlides">
+	  <div class="numbertext">4 / 6</div>
+		<img src="Images/Main4.png" style="width:100%">
+	</div>
+  
+	<div class="mySlides">
+	  <div class="numbertext">5 / 6</div>
+		<img src="Images/Main5.png" style="width:100%">
+	</div>
+  
+	<div class="mySlides">
+	  <div class="numbertext">6 / 6</div>
+		<img src="Images/Main6.png" style="width:100%">
+	</div>
+  
+	<!-- Next and previous buttons -->
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+	<!-- Image text -->
+
+
+	<!-- Thumbnail images -->
+	<div class="row">
+	  <div class="column2">
+		<img class="demo cursor" src="/Images/Main1.png" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+	  </div>
+	  <div class="column2">
+		<img class="demo cursor" src="/Images/Main 2.png" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+	  </div>
+	  <div class="column2">
+		<img class="demo cursor" src="/Images//Main3.png" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+	  </div>
+	  <div class="column2">
+		<img class="demo cursor" src="/Images/Main4.png" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+	  </div>
+	  <div class="column2">
+		<img class="demo cursor" src="/Images/Main5.png" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+	  </div>
+	  <div class="column2">
+		<img class="demo cursor" src="/Images/Main6.png" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+	  </div>
+	</div>
+  </div> 
+		
+	</main>
+	
+	<footer>
+		<div class="image-left">
+			<img src="Images/Logo.png" height="100px" width="100px"/> 
+      	</div>
+		<div class="footer-text">
+			<h2>Get In Touch</h2>
+			<h3>support@angelicY2kOutfits.com</h3>
+		</div>
+
+	</footer>
+	<div class="social-align">
+			<!-- Add font awesome icons -->
+		<a href="https://www.facebook.com/" target="_blank" class="fa fa-facebook"></a>
+		<a href="https://www.twitter.com/" target="_blank" class="fa fa-twitter"></a>
+
+		<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">		
+	</div>
+</body>
+</html>
