@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LiLTrash&#39;s blog</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on LiLTrash&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 LiLTrash</copyright>
+    <lastBuildDate>Sun, 17 Mar 2024 20:32:22 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Part 1 Building a Penetesting Testing Lab</title>
+      <link>//localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/</link>
+      <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/</guid>
+      <description>Welcome to the first part of my walkthrough for &amp;lsquo;The Ultimate Kali Linux Book&amp;rsquo; by Glen D.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/featured.png" />
+    </item>
+    
+    <item>
+      <title>Chapter 6 Performing Vulnerability Assessments</title>
+      <link>//localhost:1313/posts/chapter-6-performing-vulnerability-assessments/</link>
+      <pubDate>Thu, 14 Mar 2024 10:07:50 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/chapter-6-performing-vulnerability-assessments/</guid>
+      <description>1.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/chapter-6-performing-vulnerability-assessments/featured.png" />
+    </item>
+    
+  </channel>
+</rss>
