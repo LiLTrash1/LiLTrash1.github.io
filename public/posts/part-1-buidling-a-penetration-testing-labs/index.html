@@ -41,8 +41,8 @@
   
   
   
-  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.b36dda9ec4ec11e967fd341e7d57b8c484ac7a39f8f329f7bcf7ce4812569de8607db866a086d4789956ac0b74967e251c9a566d94d469dd28b8787fed4f46f5.js"
-    integrity="sha512-s23ansTsEeln/TQefVe4xISsejn48yn3vPfOSBJWnehgfbhmoIbUeJlWrAt0ln4lHJpWbZTUad0ouHh/7U9G9Q==" data-copy="" data-copied=""></script>
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.5200170cb3ed0adabce28870bf7ff061203bbefb075c90b7b76cc561cd376288fbd116092bd2e65b027908506b03f8fd15b5613608229bdc92f93ecf6d8faa64.js"
+    integrity="sha512-UgAXDLPtCtq84ohwv3/wYSA7vvsHXJC3t2zFYc03Yoj70RYJK9LmWwJ5CFBrA/j9FbVhNggim9yS&#43;T7PbY&#43;qZA==" data-copy="" data-copied=""></script>
   
   
   <script src="/js/zoom.min.js"></script>
@@ -67,6 +67,7 @@
 <meta property="article:published_time" content="2024-03-17T20:32:22+00:00" />
 <meta property="article:modified_time" content="2024-03-17T20:32:22+00:00" />
 <meta property="og:see_also" content="//localhost:1313/posts/chapter-6-performing-vulnerability-assessments/" />
+
 
 
   <meta name="twitter:card" content="summary_large_image" />
@@ -98,7 +99,7 @@
     "keywords": ["Lab",""],
     
     "mainEntityOfPage": "true",
-    "wordCount": "511"
+    "wordCount": "664"
   }]
   </script>
 
@@ -432,7 +433,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-03-17 20:32:22 &#43;0000 UTC">17 Mar, 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">3 mins</span><span class="px-2 text-primary-500">&middot;</span>
+  <time datetime="2024-03-17 20:32:22 &#43;0000 UTC">17 Mar, 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span><span class="px-2 text-primary-500">&middot;</span>
 
 
   
@@ -591,12 +592,14 @@
     class="min-w-[220px] py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1creating-first-lab-within-vmware">1.Creating first lab within VMware</a></li>
-    <li><a href="#2setting-up-network-interfaces-using-vboxmanage">2.Setting up network interfaces using vboxmanage</a></li>
-    <li><a href="#3-setting-up-kali-linux">3 Setting up Kali Linux</a></li>
-    <li><a href="#4-setting-up-metasploitable-2">4 Setting up Metasploitable 2</a></li>
+    <li><a href="#1-first-lab-within-virtualbox">1. First lab within VirtualBox</a></li>
+    <li><a href="#2-setting-up-network-interfaces-using-vboxmanage">2. Setting up network interfaces using vboxmanage</a></li>
+    <li><a href="#3-setting-up-kali-linux">3. Setting up Kali Linux</a></li>
+    <li><a href="#4-setting-up-metasploitable-2">4. Setting up Metasploitable 2</a></li>
     <li><a href="#5-setting-up-metasploitable-3">5. Setting up Metasploitable 3</a></li>
     <li><a href="#6-setting-up-owasp-juice-shop-website">6. Setting up OWASP Juice Shop website</a></li>
+    <li><a href="#7-setting-up-owasp-broken-web-applications">7. Setting up OWASP Broken Web Applications</a></li>
+    <li><a href="#references">References</a></li>
   </ul>
 </nav>
   </div>
@@ -610,12 +613,14 @@
     class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#1creating-first-lab-within-vmware">1.Creating first lab within VMware</a></li>
-    <li><a href="#2setting-up-network-interfaces-using-vboxmanage">2.Setting up network interfaces using vboxmanage</a></li>
-    <li><a href="#3-setting-up-kali-linux">3 Setting up Kali Linux</a></li>
-    <li><a href="#4-setting-up-metasploitable-2">4 Setting up Metasploitable 2</a></li>
+    <li><a href="#1-first-lab-within-virtualbox">1. First lab within VirtualBox</a></li>
+    <li><a href="#2-setting-up-network-interfaces-using-vboxmanage">2. Setting up network interfaces using vboxmanage</a></li>
+    <li><a href="#3-setting-up-kali-linux">3. Setting up Kali Linux</a></li>
+    <li><a href="#4-setting-up-metasploitable-2">4. Setting up Metasploitable 2</a></li>
     <li><a href="#5-setting-up-metasploitable-3">5. Setting up Metasploitable 3</a></li>
     <li><a href="#6-setting-up-owasp-juice-shop-website">6. Setting up OWASP Juice Shop website</a></li>
+    <li><a href="#7-setting-up-owasp-broken-web-applications">7. Setting up OWASP Broken Web Applications</a></li>
+    <li><a href="#references">References</a></li>
   </ul>
 </nav>
   </div>
@@ -662,58 +667,56 @@
           <p>Welcome to the first part of my walkthrough for &lsquo;The Ultimate Kali Linux Book&rsquo; by Glen D. Singh, this is a highly recommended book from Packt which have a reputation of provide top quality content for the IT industry. In this part I will be building multiple lab environments with vulnerable machines which I can utilise to test out different penetration techniques in a safe and legal network.</p>
 
 
-<h2 class="relative group">1.Creating first lab within VMware 
-    <div id="1creating-first-lab-within-vmware" class="anchor"></div>
+<h2 class="relative group">1. First lab within VirtualBox 
+    <div id="1-first-lab-within-virtualbox" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#1creating-first-lab-within-vmware" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#1-first-lab-within-virtualbox" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
 <p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/part-1-buidling-a-penetration-testing-labs/Lab-settup-1-diagram.drawio_hu41fd219b1815393c671866f157b7f4b5_38815_330x0_resize_box_3.png 330w,
+        /posts/part-1-buidling-a-penetration-testing-labs/Lab-settup-1-diagram.drawio_hu41fd219b1815393c671866f157b7f4b5_38815_660x0_resize_box_3.png 660w,
+        /posts/part-1-buidling-a-penetration-testing-labs/Lab-settup-1-diagram.drawio_hu41fd219b1815393c671866f157b7f4b5_38815_1024x0_resize_box_3.png 1024w,
+        /posts/part-1-buidling-a-penetration-testing-labs/Lab-settup-1-diagram.drawio_hu41fd219b1815393c671866f157b7f4b5_38815_1320x0_resize_box_3.png 2x"
+        src="/posts/part-1-buidling-a-penetration-testing-labs/Lab-settup-1-diagram.drawio_hu41fd219b1815393c671866f157b7f4b5_38815_660x0_resize_box_3.png"
+        alt="Lab-settup-1-diagram.drawio"
+      />
+      
+      
+    </figure>
   
 
-
-
-<div
-  
-    class="flex px-4 py-3 rounded-md bg-primary-100 dark:bg-primary-900"
-  >
-
-  <span
-    
-      class="text-primary-400 ltr:pr-3 rtl:pl-3 flex items-center"
-    >
-
-    
-
-  <span class="relative block icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
-
-  </span>
-
-
-  </span>
-
-  <span
-    
-      class="dark:text-neutral-300"
-    ><strong>todo!</strong> add image of diagram and add links to claims</span>
-</div>
 
 The diagram demonstrate the environment for this first network lab where I will be using a popular penetration OS, Kali Linux to test out the different tools that comes within its arsenal.</p>
-<p>For the virtual machine of choice I went with VMware due to previous experience with the software in the past however, upon research for different types of virtualisation I came across KVM/Qemu which is a fully open-source and a higher frequency of security update with transparent reports whereas Oracle provides security through obscurity.</p>
+<p>For the virtual machine of choice I went with Vbox due to previous experience with the software in the past however, upon research for different types of virtualisation I came across KVM/Qemu which is a fully open-source and a higher frequency of security update with transparent reports whereas Oracle provides security through obscurity.</p>
 
 
-<h2 class="relative group">2.Setting up network interfaces using vboxmanage 
-    <div id="2setting-up-network-interfaces-using-vboxmanage" class="anchor"></div>
+<h2 class="relative group">2. Setting up network interfaces using vboxmanage 
+    <div id="2-setting-up-network-interfaces-using-vboxmanage" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#2setting-up-network-interfaces-using-vboxmanage" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#2-setting-up-network-interfaces-using-vboxmanage" aria-label="Anchor">#</a>
     </span>        
     
 </h2>
@@ -725,7 +728,7 @@ The diagram demonstrate the environment for this first network lab where I will 
 </ul>
 
 
-<h2 class="relative group">3 Setting up Kali Linux 
+<h2 class="relative group">3. Setting up Kali Linux 
     <div id="3-setting-up-kali-linux" class="anchor"></div>
     
     <span
@@ -828,7 +831,7 @@ Adapter 3:
 </p>
 
 
-<h2 class="relative group">4 Setting up Metasploitable 2 
+<h2 class="relative group">4. Setting up Metasploitable 2 
     <div id="4-setting-up-metasploitable-2" class="anchor"></div>
     
     <span
@@ -929,8 +932,8 @@ $ curl -O https://raw.githubusercontent.com/rapid7/metasploitable3/master/Vagran
     >Encountering IP address configuration error during setup</span>
 </div>
 
-When setting up Vagrant I encountered an error message on a misconfigured IP range, upon research I came across this post at <a href="https://stackoverflow.com/questions/70704093/the-ip-address-configured-for-the-host-only-network-is-not-within-the-allowed-ra"   target="_blank">
-    stackoverflow</a></p>
+When setting up Vagrant I encountered an error message on a misconfigured IP range, upon further research I came across someone with a similar problem and found a solution here <a href="#references"  >
+    [1]</a></p>
 <p>Issue prompt:
 
 
@@ -1020,6 +1023,43 @@ When setting up Vagrant I encountered an error message on a misconfigured IP ran
 
 </li>
 </ul>
+
+
+<h2 class="relative group">7. Setting up OWASP Broken Web Applications 
+    <div id="7-setting-up-owasp-broken-web-applications" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#7-setting-up-owasp-broken-web-applications" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Install the zip file on the internet at <a href="https://sourceforge.net/projects/owaspbwa/files/"   target="_blank">
+    https://sourceforge.net/projects/owaspbwa/files/</a></p>
+<p>This will contain pre-made Vbox machines which needs to be connected to the lab network:</p>
+<ul>
+<li>VM Box &gt; New &gt; Expert Mode &gt; Name: OWASP BWA &gt; Type: Linux &gt; Memory: 1024 MB &gt; Hard Disk Selector add: OWASP Broken Web Apps-cl1.vmdk &gt; Choose &gt; Finish</li>
+<li>Click on Settings of OWASP Web &gt; Network &gt; Adapter 1 &gt; Attached to: Internal Network &gt; Name: PentestNet &gt; OK</li>
+<li>Login : root:owaspbwa</li>
+</ul>
+<p>This was it for this walkthrough on how to install and setuping up multiple virtual machines and having them connected to a private network for testing, there is an extended section to setup an environment for <strong>advanced hacking techniques</strong> but will be covered in a later part. Next I will be covering passive information-gather, one of the most important step to a great attack.</p>
+
+
+<h2 class="relative group">References 
+    <div id="references" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#references" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<ol>
+<li><a href="https://stackoverflow.com/questions/70704093/the-ip-address-configured-for-the-host-only-network-is-not-within-the-allowed-ra"   target="_blank">
+    https://stackoverflow.com/questions/70704093/the-ip-address-configured-for-the-host-only-network-is-not-within-the-allowed-ra</a></li>
+</ol>
 
         </div>
                 
