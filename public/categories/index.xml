@@ -7,23 +7,13 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 LiLTrash</copyright>
-    <lastBuildDate>Sun, 17 Mar 2024 20:32:22 +0000</lastBuildDate><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 Mar 2024 19:14:23 +0000</lastBuildDate><atom:link href="//localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Infosec</title>
-      <link>//localhost:1313/categories/infosec/</link>
-      <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
+      <title>Walkthrough</title>
+      <link>//localhost:1313/categories/walkthrough/</link>
+      <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
       
-      <guid>//localhost:1313/categories/infosec/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Computing</title>
-      <link>//localhost:1313/categories/computing/</link>
-      <pubDate>Thu, 14 Mar 2024 10:07:50 +0000</pubDate>
-      
-      <guid>//localhost:1313/categories/computing/</guid>
+      <guid>//localhost:1313/categories/walkthrough/</guid>
       <description></description>
       
     </item>

@@ -1,13 +1,13 @@
 ---
-title: "Part 1 Building a Penetesting Testing Lab"
+title: "Part 1 Building a Penetesting Lab"
 date: 2024-03-17T20:32:22Z
 draft: false
-categories: ["Infosec"]
-tags: ["Lab", ""]
+categories: ["Walkthrough"]
+tags: ["Lab", "Pentesting"]
 series: ["Ultimate-Kali-Linux-Book"]
 series_order: 1
 ---
-Welcome to the first part of my walkthrough for 'The Ultimate Kali Linux Book' by Glen D. Singh, this is a highly recommended book from Packt which have a reputation of provide top quality content for the IT industry. In this part I will be building multiple lab environments with vulnerable machines which I can utilise to test out different penetration techniques in a safe and legal network.
+Welcome to the first part of my walkthrough for 'The Ultimate Kali Linux Book' by Glen D. Singh, this is a highly recommended book from Packt which have a reputation of providing top quality content for the IT industry. In this part I will be building multiple lab environments with vulnerable machines which I can utilise to test out different penetration techniques in a safe and legal network.
 ## 1. First lab within VirtualBox
 
 ![Lab-settup-1-diagram.drawio](Lab-settup-1-diagram.drawio.png)

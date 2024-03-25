@@ -9,23 +9,23 @@
     <copyright>© 2024 LiLTrash</copyright>
     <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Part 1 Building a Penetesting Testing Lab</title>
+      <title>Part 2 Reconnaissance and Footprint</title>
+      <link>//localhost:1313/posts/part-2-reconnaissance-and-footprint/</link>
+      <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
+      
+      <guid>//localhost:1313/posts/part-2-reconnaissance-and-footprint/</guid>
+      <description>Welcome to the second part of my walkthrough of &amp;lsquo;The Ultimate Kali Linux Book&amp;rsquo; by Glen D.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/part-2-reconnaissance-and-footprint/feature.png" />
+    </item>
+    
+    <item>
+      <title>Part 1 Building a Penetesting Lab</title>
       <link>//localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/</link>
       <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
       
       <guid>//localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/</guid>
       <description>Welcome to the first part of my walkthrough for &amp;lsquo;The Ultimate Kali Linux Book&amp;rsquo; by Glen D.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/featured.png" />
-    </item>
-    
-    <item>
-      <title>Chapter 6 Performing Vulnerability Assessments</title>
-      <link>//localhost:1313/posts/chapter-6-performing-vulnerability-assessments/</link>
-      <pubDate>Thu, 14 Mar 2024 10:07:50 +0000</pubDate>
-      
-      <guid>//localhost:1313/posts/chapter-6-performing-vulnerability-assessments/</guid>
-      <description>1.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/chapter-6-performing-vulnerability-assessments/featured.png" />
     </item>
     
   </channel>
