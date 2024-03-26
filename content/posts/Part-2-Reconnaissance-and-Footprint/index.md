@@ -16,6 +16,11 @@ Information doesn't need to be secret to be valuable, which is why we should be 
 When penetesting an organisation it's important to mask my identity as #1 it will test out the intrusion detection systems in placed and #2 it's good practice to use OPSEC.
 
 ### 1.2 Using Proxy chaining to mask traffic
+![Proxy-Chains](Proxy-Chains2.png)
 A proxy is basicly a computer which you past down requests to a destination for you. A proxy chain is basicly like a relay race where you past the batton (requests) to the next person and they do the same to the last chain.
 
-These are good as it makes it harder 
+**Harder to track:** Proxy chains are used as they make it harder for a request to be traced back to its original source as logs have to be requested from proxy which can be time consuming and lot of work.
+
+{{< alert icon="comment" cardColor="#e5f0fc" textColor="#086ddd" iconColor="#086ddd" >}}
+Found out more on proxies here: [[All-on Proxies]](../../all-in-one/all-on-proxies/)
+{{< /alert >}}

@@ -8,4 +8,6 @@ tags: ["", ""]
 ---
 
 ## 1. How do proxies work?
-When learning about anonymising my [footprint online](../posts/part-2-reconnaissance-and-footprint/)
+When learning about anonymising my [footprint online](../../posts/part-2-reconnaissance-and-footprint/)
+
+🚧 Writing under construction 🚧
