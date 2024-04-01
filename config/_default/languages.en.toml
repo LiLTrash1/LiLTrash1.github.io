@@ -1,20 +1,20 @@
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "LiLTrash's blog"
+title = "Val's blog"
 
 [params]
   displayName = "EN"
   isoCode = "en"
   rtl = false
   dateFormat = "2 Jan, 2006"
-#   logo = "img/blowfish_logo.png"
+   logo = "img/big-cat.webp"
 #   secondaryLogo = "img/lain-bear-icon.jpg"
     description = "My awesome website"
 #   copyright = "Copy, _right?_ :thinking_face:"
 
  [author]
-   name = "LiLTrash"
+   name = "Valentin"
    image = "img/lain-bear-icon.jpg"
    headline = "Welcome to my blog"
    bio = "Focusing on mastering penetration testing and digital forensics"

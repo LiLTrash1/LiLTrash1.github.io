@@ -1,49 +1,49 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on LiLTrash&#39;s blog</title>
-    <link>//localhost:1313/tags/</link>
-    <description>Recent content in Tags on LiLTrash&#39;s blog</description>
+    <title>Tags on Val&#39;s blog</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on Val&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 LiLTrash</copyright>
-    <lastBuildDate>Sun, 24 Mar 2024 19:14:23 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2024 Valentin</copyright>
+    <lastBuildDate>Sun, 24 Mar 2024 19:14:23 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Anonymity</title>
-      <link>//localhost:1313/tags/anonymity/</link>
+      <link>http://localhost:1313/tags/anonymity/</link>
       <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/anonymity/</guid>
+      <guid>http://localhost:1313/tags/anonymity/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>OISNT</title>
-      <link>//localhost:1313/tags/oisnt/</link>
+      <link>http://localhost:1313/tags/oisnt/</link>
       <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/oisnt/</guid>
+      <guid>http://localhost:1313/tags/oisnt/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Lab</title>
-      <link>//localhost:1313/tags/lab/</link>
+      <link>http://localhost:1313/tags/lab/</link>
       <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/lab/</guid>
+      <guid>http://localhost:1313/tags/lab/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Pentesting</title>
-      <link>//localhost:1313/tags/pentesting/</link>
+      <link>http://localhost:1313/tags/pentesting/</link>
       <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
       
-      <guid>//localhost:1313/tags/pentesting/</guid>
+      <guid>http://localhost:1313/tags/pentesting/</guid>
       <description></description>
       
     </item>

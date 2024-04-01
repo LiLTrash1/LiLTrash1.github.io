@@ -1,11 +1,11 @@
-colorScheme = "blowfish"
+colorScheme = "ocean"
 defaultAppearance = "light"
-autoSwitchAppearance = true
+autoSwitchAppearance = false
 enableSearch = true
 enableCodeCopy = false
 disableImageOptimization = false
 disableTextInHeader = false
-defaultBackgroundImage = "img/lain-bear-icon.jpg"
+defaultBackgroundImage = "img/SANY0234.JPG"
 
 [header]
 layout = "basic"
@@ -18,14 +18,15 @@ showAppearanceSwitcher = true
 showScrollToTop = true
 
 [homepage]
-layout = "profile"
+layout = "background"
 showRecent = true
 showRecentItems = "5"
 showMoreLink = true
 showMoreLinkDest = "/posts"
 cardView = false
 cardViewScreenWidth = false
-layoutBackgroundBlur = false
+layoutBackgroundBlur = true
+homepageImage = "img/SANY0234.JPG"
 
 [article]
 showDate = true
@@ -39,7 +40,7 @@ layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
 showBreadcrumbs = false
 showDraftLabel = true
-showEdit = true
+showEdit = false
 editAppendPath = true
 seriesOpened = false
 showHeadingAnchors = true

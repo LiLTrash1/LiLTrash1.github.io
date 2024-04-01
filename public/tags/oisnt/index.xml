@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OISNT on LiLTrash&#39;s blog</title>
-    <link>//localhost:1313/tags/oisnt/</link>
-    <description>Recent content in OISNT on LiLTrash&#39;s blog</description>
+    <title>OISNT on Val&#39;s blog</title>
+    <link>http://localhost:1313/tags/oisnt/</link>
+    <description>Recent content in OISNT on Val&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 LiLTrash</copyright>
-    <lastBuildDate>Sun, 24 Mar 2024 19:14:23 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/oisnt/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2024 Valentin</copyright>
+    <lastBuildDate>Sun, 24 Mar 2024 19:14:23 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/oisnt/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Part 2 Reconnaissance and Footprint</title>
-      <link>//localhost:1313/posts/part-2-reconnaissance-and-footprint/</link>
+      <link>http://localhost:1313/posts/part-2-reconnaissance-and-footprint/</link>
       <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
       
-      <guid>//localhost:1313/posts/part-2-reconnaissance-and-footprint/</guid>
+      <guid>http://localhost:1313/posts/part-2-reconnaissance-and-footprint/</guid>
       <description>Welcome to the second part of my walkthrough of &amp;lsquo;The Ultimate Kali Linux Book&amp;rsquo; by Glen D.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/posts/part-2-reconnaissance-and-footprint/feature.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-2-reconnaissance-and-footprint/feature.png" />
     </item>
     
   </channel>
