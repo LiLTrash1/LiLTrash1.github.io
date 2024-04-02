@@ -99,7 +99,7 @@
     "keywords": ["OISNT","Anonymity"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "742"
+    "wordCount": "1142"
   }]
   </script>
 
@@ -443,7 +443,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-03-24 19:14:23 &#43;0000 UTC">24 Mar, 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+  <time datetime="2024-03-24 19:14:23 &#43;0000 UTC">24 Mar, 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
   
 
   
@@ -608,14 +608,14 @@
     </li>
     <li><a href="#3-gathering-employees-information">3. Gathering Employees&rsquo; information</a>
       <ul>
-        <li><a href="#31-recon-ng">3.1 Recon-ng</a></li>
-        <li><a href="#32-theharvester">3.2 theHarvester</a></li>
-      </ul>
-    </li>
-    <li><a href="#4-social-media-osint">4. Social Media OSINT</a>
-      <ul>
-        <li><a href="#41-instagram">4.1 Instagram</a></li>
-        <li><a href="#42-sherlock">4.2 Sherlock</a></li>
+        <li><a href="#31-instagram--facebook--linkedin">3.1 Instagram / Facebook / Linkedin</a></li>
+        <li><a href="#32-recon-ng">3.2 Recon-ng</a></li>
+        <li><a href="#33-theharvester">3.3 theHarvester</a></li>
+        <li><a href="#34-sherlock">3.4 Sherlock</a>
+          <ul>
+            <li><a href="#installation">Installation</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#references">References</a></li>
@@ -653,14 +653,14 @@
     </li>
     <li><a href="#3-gathering-employees-information">3. Gathering Employees&rsquo; information</a>
       <ul>
-        <li><a href="#31-recon-ng">3.1 Recon-ng</a></li>
-        <li><a href="#32-theharvester">3.2 theHarvester</a></li>
-      </ul>
-    </li>
-    <li><a href="#4-social-media-osint">4. Social Media OSINT</a>
-      <ul>
-        <li><a href="#41-instagram">4.1 Instagram</a></li>
-        <li><a href="#42-sherlock">4.2 Sherlock</a></li>
+        <li><a href="#31-instagram--facebook--linkedin">3.1 Instagram / Facebook / Linkedin</a></li>
+        <li><a href="#32-recon-ng">3.2 Recon-ng</a></li>
+        <li><a href="#33-theharvester">3.3 theHarvester</a></li>
+        <li><a href="#34-sherlock">3.4 Sherlock</a>
+          <ul>
+            <li><a href="#installation">Installation</a></li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#references">References</a></li>
@@ -1168,66 +1168,200 @@ Here is a demonstration of Maltgeo scanning Microsoft.com for similar domains an
     </span>        
     
 </h2>
+<p>Now it is ever more common to find and gather employee credentials and the culture of an organisation as more and more people use social media as their daily routine which entices them to share things that organisations wouldn&rsquo;t want to be exposed online such as:</p>
+<ul>
+<li>Pictures of employee badge</li>
+<li>Technologies used in background such as on screens, cameras, SCADA systems</li>
+<li>Uniforms and work culture</li>
+</ul>
 
 
-<h3 class="relative group">3.1 Recon-ng 
-    <div id="31-recon-ng" class="anchor"></div>
+<h3 class="relative group">3.1 Instagram / Facebook / Linkedin 
+    <div id="31-instagram--facebook--linkedin" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#31-recon-ng" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#31-instagram--facebook--linkedin" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
+<p>Using Instagram, Facebook and Linkedin can be helpful as most organisations will have an online precense which is worth check for any valuable information, these can be usually found in posts made, tagged posts or events.</p>
 
 
-<h3 class="relative group">3.2 theHarvester 
-    <div id="32-theharvester" class="anchor"></div>
+<h3 class="relative group">3.2 Recon-ng 
+    <div id="32-recon-ng" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#32-theharvester" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#32-recon-ng" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
+<p>The Recon-ng framework is designed to bring all common OSINT tools under one roof for convinience by providing menus for navigation and management of information found.This tool comes pre-installed with Kali and the documents can be found here: <a href="https://github.com/lanmaster53/recon-ng"   target="_blank">
+    https://github.com/lanmaster53/recon-ng</a>
 
 
-<h2 class="relative group">4. Social Media OSINT 
-    <div id="4-social-media-osint" class="anchor"></div>
+
+
+
+  
+  
+  
+    <figure>
+      <img class="my-0 rounded-md" loading="lazy" src="Recon-ng-demo.gif" alt="Recon-ng-demo" />
+      
+    </figure>
+  
+
+</p>
+<p>In the demo above I have loaded the &lsquo;whois_procs&rsquo; module which will search for names and emails related to a domain. After configuration the <code>run</code> command is used which will execute the scrapping and produce a list of results:
+
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/part-2-reconnaissance-and-footprint/Recon-ng-whois-results_hu1e19ea92a071155b79f4e4d9f05719ae_47167_330x0_resize_box_3.png 330w,
+        /posts/part-2-reconnaissance-and-footprint/Recon-ng-whois-results_hu1e19ea92a071155b79f4e4d9f05719ae_47167_660x0_resize_box_3.png 660w,
+        /posts/part-2-reconnaissance-and-footprint/Recon-ng-whois-results_hu1e19ea92a071155b79f4e4d9f05719ae_47167_1024x0_resize_box_3.png 1024w,
+        /posts/part-2-reconnaissance-and-footprint/Recon-ng-whois-results_hu1e19ea92a071155b79f4e4d9f05719ae_47167_1320x0_resize_box_3.png 2x"
+        src="/posts/part-2-reconnaissance-and-footprint/Recon-ng-whois-results_hu1e19ea92a071155b79f4e4d9f05719ae_47167_660x0_resize_box_3.png"
+        alt="Recon-ng-whois-results"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+
+
+<h3 class="relative group">3.3 theHarvester 
+    <div id="33-theharvester" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#4-social-media-osint" aria-label="Anchor">#</a>
-    </span>        
-    
-</h2>
-
-
-<h3 class="relative group">4.1 Instagram 
-    <div id="41-instagram" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
-        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#41-instagram" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#33-theharvester" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
+<p>The Harvester is another tool which is similar to Recon-ng where it serves as a central tool to scrap information such as emails, names, phone number and more from difference sources. It comes pre-install with Kali and its documents can be found here: <a href="https://github.com/laramies/theHarvester"   target="_blank">
+    https://github.com/laramies/theHarvester</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Open help menu </span>
+</span></span><span class="line"><span class="cl">$ theHarvester -h         
+</span></span><span class="line"><span class="cl"><span class="c1">#Perform a scan with specific module </span>
+</span></span><span class="line"><span class="cl">$ theHarvester -d microsoft.com --dns-server 8.8.8.8 <span class="o">[</span>module<span class="o">]</span>
+</span></span></code></pre></div>
 
-
-<h3 class="relative group">4.2 Sherlock 
-    <div id="42-sherlock" class="anchor"></div>
+<h3 class="relative group">3.4 Sherlock 
+    <div id="34-sherlock" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#42-sherlock" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#34-sherlock" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
+<p>The Sherlock project is a open-source tool which will search over 200 possible social media platforms for a given username. This is especially helpful to scan for a persons online precences once their username is found (e.g. Instagram username can be used)</p>
+
+
+<h4 class="relative group">Installation 
+    <div id="installation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#installation" aria-label="Anchor">#</a>
+    </span>        
+    
+</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ git clone https://github.com/sherlock-project/sherlock.git
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> sherlock/
+</span></span><span class="line"><span class="cl">$ sudo pip install -r requirements.txt 
+</span></span></code></pre></div><p>Search accounts with:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ python3 sherlock &lt;username&gt;
+</span></span><span class="line"><span class="cl">$ python3 sherlock &lt;username&gt; --timeout <span class="m">5</span>        <span class="c1"># 5 sec search</span>
+</span></span></code></pre></div><p>
+
+
+
+
+  
+  
+    
+  
+  
+    <figure>
+      
+      <img
+        class="my-0 rounded-md"
+        loading="lazy"
+        srcset="
+        /posts/part-2-reconnaissance-and-footprint/Sherlock-result-example_hu9db974632d6ccf587fabafee7bd1934c_160358_330x0_resize_box_3.png 330w,
+        /posts/part-2-reconnaissance-and-footprint/Sherlock-result-example_hu9db974632d6ccf587fabafee7bd1934c_160358_660x0_resize_box_3.png 660w,
+        /posts/part-2-reconnaissance-and-footprint/Sherlock-result-example_hu9db974632d6ccf587fabafee7bd1934c_160358_1024x0_resize_box_3.png 1024w,
+        /posts/part-2-reconnaissance-and-footprint/Sherlock-result-example_hu9db974632d6ccf587fabafee7bd1934c_160358_1320x0_resize_box_3.png 2x"
+        src="/posts/part-2-reconnaissance-and-footprint/Sherlock-result-example_hu9db974632d6ccf587fabafee7bd1934c_160358_660x0_resize_box_3.png"
+        alt="Sherlock-result-example"
+      />
+      
+      
+    </figure>
+  
+
+</p>
+<p>
+  
+  
+  
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md"
+    style="background-color: #352223"
+  >
+
+  <span
+    
+      class="ltr:pr-3 rtl:pl-3 flex items-center"
+      style="color: #fe4651"
+    >
+
+    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+
+  </span>
+
+
+  </span>
+
+  <span
+    
+      style="color: #fe4651"
+    >May result with unrelated accounts to target</span>
+</div>
+
+Sherlock is a great tool however, it may result with accounts that aren&rsquo;t related to the target if their username is common or too broad but it is still worth looking through the list</p>
+<p>This concludes everything for my walkthrough or the reconnaissance and footprinting section of ‘The Ultimate Kali Linux Book’ by Glen D. Singh. In the next section I will be covering active reconnaissance techniques such as <strong>nmap</strong>, Google dorks, <strong>metasploit</strong> and more.</p>
 
 
 <h2 class="relative group">References 
@@ -1245,6 +1379,10 @@ Here is a demonstration of Maltgeo scanning Microsoft.com for similar domains an
     https://restoreprivacy.com/vpn/warning-list/</a></li>
 <li><a href="https://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-251/version_id-537052/Microsoft-Sql-Server-2008.html?page=1&amp;order=1&amp;trc=5&amp;sha=8e264eacb5dd38ff3230beab590e25a3288243ea"   target="_blank">
     https://www.cvedetails.com/vulnerability-list/vendor_id-26/product_id-251</a></li>
+<li><a href="https://github.com/lanmaster53/recon-ng"   target="_blank">
+    https://github.com/lanmaster53/recon-ng</a></li>
+<li><a href="https://github.com/laramies/theHarvester"   target="_blank">
+    https://github.com/laramies/theHarvester</a></li>
 </ol>
 
         </div>
