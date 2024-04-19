@@ -9,12 +9,22 @@
     <copyright>© 2024 Valentin</copyright>
     <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Part 3 Exploring Active Reconnaissance Techniques</title>
+      <link>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</link>
+      <pubDate>Tue, 09 Apr 2024 10:32:25 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</guid>
+      <description>Scratching the surface of the vast world of active recon, exploring tools which give juicy information such as nmap, metasploit, netdiscover and more.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/netdiscover-demo.png" />
+    </item>
+    
+    <item>
       <title>Part 2 Reconnaissance and Footprint</title>
       <link>http://localhost:1313/posts/part-2-reconnaissance-and-footprint/</link>
       <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/part-2-reconnaissance-and-footprint/</guid>
-      <description>Welcome to the second part of my walkthrough of &amp;lsquo;The Ultimate Kali Linux Book&amp;rsquo; by Glen D.</description>
+      <description>Techniques to avoid traces back to identity, browsing the web to collect information on a target and social media account leaks.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-2-reconnaissance-and-footprint/feature.png" />
     </item>
     
@@ -24,7 +34,7 @@
       <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/</guid>
-      <description>Welcome to the first part of my walkthrough for &amp;lsquo;The Ultimate Kali Linux Book&amp;rsquo; by Glen D.</description>
+      <description>Building virtual machines, installing Kali Linux, Metasploitable 2&amp;amp;3, OWASP web applications and windows machines for advanced testing.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/featured.png" />
     </item>
     

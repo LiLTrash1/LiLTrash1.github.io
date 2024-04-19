@@ -3,10 +3,11 @@ title: "Part 2 Reconnaissance and Footprint"
 date: 2024-03-24T19:14:23Z
 draft: false
 categories: ["Walkthrough"]
-tags: ["OISNT", "Anonymity"]
+tags: ["OSINT", "Anonymity"]
 series: ["Ultimate-Kali-Linux-Book"]
 series_order: 2
 ---
+Techniques to avoid traces back to identity, browsing the web to collect information on a target and social media account leaks.
 
 Welcome to the second part of my walkthrough of 'The Ultimate Kali Linux Book' by Glen D. Singh, for this section I will be covering different passive open source intelligence techniques (OISNT) which are ways to collecting information on a target available openly on the internet.
 
@@ -22,7 +23,7 @@ A proxy is basicly a computer which you past down requests to a destination for 
 **Harder to track:** Proxy chains are used as they make it harder for a request to be traced back to its original source as logs have to be requested from proxy which can be time consuming and lot of work.
 
 {{< alert icon="comment" cardColor="#e5f0fc" textColor="#086ddd" iconColor="#086ddd" >}}
-Found out more on proxies here: [[All-on Proxies]](../../all-in-one/all-on-proxies/)
+Find out more on proxies here: [[All-on Proxies]](../../all-in-one/all-on-proxies/)
 {{< /alert >}}
 
 ### 1.3 Using Virtual Private Networks (VPN) to mask traffic
@@ -34,7 +35,7 @@ A VPN is similar to a proxy where you relay your traffic to another computer so 
 Using a VPN is great for changing your location but I would say their not a worthy technique to mask traffic as their are lots of issues which arise with VPNs. [[1]](https://restoreprivacy.com/vpn/warning-list/)
 
 {{< alert icon="comment" cardColor="#e5f0fc" textColor="#086ddd" iconColor="#086ddd" >}}
-Found out more about VPNs here: [[All-on VPNs]](../../all-in-one/all-on-vpn/)
+Find out more about VPNs here: [[All-on VPNs]](../../all-in-one/all-on-vpn/)
 {{< /alert >}}
 
 ## 2. Gathering an Organisation's IT Infrastructure
@@ -42,7 +43,7 @@ When pentesting an organisation, 80% of the process will be gathering informatio
 
 There are plenty of tools out there that will scrape the internet for information on a target which I think some are more helpful than others but it doesn't hurt to check most of them as one piece of information can make all the difference during recon.
 
-### 2.1 Using Whois 
+### 2.1 Using Whois {#whois}
 Whois is a tool which allows you to pull information from a public database of who is behind a certain domain name. When registering a website some services will provide the option to hide information hosted to the databse for a fee.
 
 This includes:

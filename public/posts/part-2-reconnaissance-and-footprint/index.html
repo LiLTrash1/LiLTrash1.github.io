@@ -12,7 +12,7 @@
   <meta name="title" content="Part 2 Reconnaissance and Footprint &middot; Val&#39;s blog" />
   
   <meta name="description" content="My awesome website" />
-  <meta name="keywords" content="OISNT, Anonymity, " />
+  <meta name="keywords" content="OSINT, Anonymity, " />
   
   
   <link rel="canonical" href="http://localhost:1313/posts/part-2-reconnaissance-and-footprint/" />
@@ -61,18 +61,18 @@
   
   
   <meta property="og:title" content="Part 2 Reconnaissance and Footprint" />
-<meta property="og:description" content="Welcome to the second part of my walkthrough of &lsquo;The Ultimate Kali Linux Book&rsquo; by Glen D." />
+<meta property="og:description" content="Techniques to avoid traces back to identity, browsing the web to collect information on a target and social media account leaks." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/part-2-reconnaissance-and-footprint/" /><meta property="og:image" content="http://localhost:1313/posts/part-2-reconnaissance-and-footprint/feature.png" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-03-24T19:14:23+00:00" />
 <meta property="article:modified_time" content="2024-03-24T19:14:23+00:00" />
-<meta property="og:see_also" content="http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/" />
+<meta property="og:see_also" content="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/" /><meta property="og:see_also" content="http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/" />
 
 
 
   <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:image" content="http://localhost:1313/posts/part-2-reconnaissance-and-footprint/feature.png" /><meta name="twitter:title" content="Part 2 Reconnaissance and Footprint"/>
-<meta name="twitter:description" content="Welcome to the second part of my walkthrough of &lsquo;The Ultimate Kali Linux Book&rsquo; by Glen D."/>
+<meta name="twitter:description" content="Techniques to avoid traces back to identity, browsing the web to collect information on a target and social media account leaks."/>
 
   
   <script type="application/ld+json">
@@ -83,7 +83,7 @@
     "name": "Part 2 Reconnaissance and Footprint",
     "headline": "Part 2 Reconnaissance and Footprint",
     
-    "abstract": "Welcome to the second part of my walkthrough of \u0026lsquo;The Ultimate Kali Linux Book\u0026rsquo; by Glen D.",
+    "abstract": "Techniques to avoid traces back to identity, browsing the web to collect information on a target and social media account leaks.",
     "inLanguage": "en",
     "url" : "http:\/\/localhost:1313\/posts\/part-2-reconnaissance-and-footprint\/",
     "author" : {
@@ -96,10 +96,10 @@
     
     "dateModified": "2024-03-24T19:14:23\u002b00:00",
     
-    "keywords": ["OISNT","Anonymity"],
+    "keywords": ["OSINT","Anonymity"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1142"
+    "wordCount": "1163"
   }]
   </script>
 
@@ -477,10 +477,10 @@
   
   
   
-  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/oisnt/&#34;,'_self');">
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/osint/&#34;,'_self');">
     <span class="flex" style="cursor: pointer;">
   <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-    OISNT
+    OSINT
   </span>
 </span>
   </span>
@@ -595,7 +595,7 @@
     </li>
     <li><a href="#2-gathering-an-organisations-it-infrastructure">2. Gathering an Organisation&rsquo;s IT Infrastructure</a>
       <ul>
-        <li><a href="#21-using-whois">2.1 Using Whois</a>
+        <li><a href="#whois">2.1 Using Whois</a>
           <ul>
             <li><a href="#211-linux-whois-tool">2.1.1 Linux Whois tool</a></li>
             <li><a href="#212-website-whois-alternative">2.1.2 Website Whois alternative</a></li>
@@ -640,7 +640,7 @@
     </li>
     <li><a href="#2-gathering-an-organisations-it-infrastructure">2. Gathering an Organisation&rsquo;s IT Infrastructure</a>
       <ul>
-        <li><a href="#21-using-whois">2.1 Using Whois</a>
+        <li><a href="#whois">2.1 Using Whois</a>
           <ul>
             <li><a href="#211-linux-whois-tool">2.1.1 Linux Whois tool</a></li>
             <li><a href="#212-website-whois-alternative">2.1.2 Website Whois alternative</a></li>
@@ -701,13 +701,23 @@
     </div>
     
     
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/">
+            Part 3: Part 3 Exploring Active Reconnaissance Techniques
+        </a>
+    </div>
+    
+    
 
 </details>
 
 
 
         <div class="article-content max-w-prose mb-20">
-          <p>Welcome to the second part of my walkthrough of &lsquo;The Ultimate Kali Linux Book&rsquo; by Glen D. Singh, for this section I will be covering different passive open source intelligence techniques (OISNT) which are ways to collecting information on a target available openly on the internet.</p>
+          <p>Techniques to avoid traces back to identity, browsing the web to collect information on a target and social media account leaks.</p>
+<p>Welcome to the second part of my walkthrough of &lsquo;The Ultimate Kali Linux Book&rsquo; by Glen D. Singh, for this section I will be covering different passive open source intelligence techniques (OISNT) which are ways to collecting information on a target available openly on the internet.</p>
 <p>Information doesn&rsquo;t need to be secret to be valuable, which is why we should be cautious of what information we put out on the internet. I will be demonstrating common tools used for OSINT, ways to mask investigations from target and how data collected can be used in a attack.</p>
 
 
@@ -798,7 +808,7 @@ A proxy is basicly a computer which you past down requests to a destination for 
   <span
     
       style="color: #086ddd"
-    >Found out more on proxies here: <a href="../../all-in-one/all-on-proxies/"  >
+    >Find out more on proxies here: <a href="../../all-in-one/all-on-proxies/"  >
     [All-on Proxies]</a></span>
 </div>
 
@@ -879,7 +889,7 @@ A proxy is basicly a computer which you past down requests to a destination for 
   <span
     
       style="color: #086ddd"
-    >Found out more about VPNs here: <a href="../../all-in-one/all-on-vpn/"  >
+    >Find out more about VPNs here: <a href="../../all-in-one/all-on-vpn/"  >
     [All-on VPNs]</a></span>
 </div>
 
@@ -900,12 +910,12 @@ A proxy is basicly a computer which you past down requests to a destination for 
 
 
 <h3 class="relative group">2.1 Using Whois 
-    <div id="21-using-whois" class="anchor"></div>
+    <div id="whois" class="anchor"></div>
     
     <span
         class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
         <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
-            style="text-decoration-line: none !important;" href="#21-using-whois" aria-label="Anchor">#</a>
+            style="text-decoration-line: none !important;" href="#whois" aria-label="Anchor">#</a>
     </span>        
     
 </h3>
@@ -1412,6 +1422,15 @@ Sherlock is a great tool however, it may result with accounts that aren&rsquo;t 
     </div>
     
     
+    
+    <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/">
+            Part 3: Part 3 Exploring Active Reconnaissance Techniques
+        </a>
+    </div>
+    
+    
 
 </details>
 
@@ -1468,6 +1487,28 @@ Sherlock is a great tool however, it may result with accounts that aren&rsquo;t 
           
         </span>
         <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/part-3-exploring-active-reconnaissance-techniques/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Part 3 Exploring Active Reconnaissance Techniques</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-04-09 10:32:25 &#43;0000 UTC">9 Apr, 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>

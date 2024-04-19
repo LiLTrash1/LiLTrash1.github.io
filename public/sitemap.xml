@@ -4,7 +4,13 @@
 
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-03-31T08:35:25+00:00</lastmod>
+    <lastmod>2024-04-09T10:32:25+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</loc>
+    <lastmod>2024-04-09T10:32:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

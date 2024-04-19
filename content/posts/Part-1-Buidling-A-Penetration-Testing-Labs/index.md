@@ -7,6 +7,8 @@ tags: ["Lab", "Pentesting"]
 series: ["Ultimate-Kali-Linux-Book"]
 series_order: 1
 ---
+Building virtual machines, installing Kali Linux, Metasploitable 2&3, OWASP web applications and windows machines for advanced testing.
+
 Welcome to the first part of my walkthrough for 'The Ultimate Kali Linux Book' by Glen D. Singh, this is a highly recommended book from Packt which have a reputation of providing top quality content for the IT industry. In this part I will be building multiple lab environments with vulnerable machines which I can utilise to test out different penetration techniques in a safe and legal network.
 ## 1. First lab within VirtualBox
 
