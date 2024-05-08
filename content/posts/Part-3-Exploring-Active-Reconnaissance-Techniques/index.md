@@ -8,7 +8,7 @@ tags: ["OSINT", "DNS"]
 series: ["Ultimate-Kali-Linux-Book"]
 series_order: 3
 ---
-Scratching the surface of the vast world of active recon, exploring tools which give juicy information such as nmap, metasploit, netdiscover and more.
+Scratching the surface of the vast world of active recon, exploring tools which provide juicy information such as nmap, metasploit, netdiscover and more.
 
 Welcome to the third part of the my walkthrough of ‘The Ultimate Kali Linux Book’ by Glen D. Singh, in this section I'll be going over some active information techniques. These directly interacts with the target which is helpful at collecting juicy information such as ports which can be later on exploited for vulnerabilities and all the exciting stuff.
 
@@ -141,7 +141,7 @@ sudo netdiscover -r 172.30.1.0/24 # Range scan
 ### 3.2 Using nmap to discover devices and ports
 Nmap is most known for it's port scanning abilities, but it also have additional features such as scripts exploit for enumeration and device discovery.
 {{< alert icon="comment" cardColor="#e5f0fc" textColor="#086ddd" iconColor="#086ddd" >}}
-Find out more about VPNs here: [Nmap Manual - host discovery](https://nmap.org/book/man-host-discovery.html)
+Find out more about Nmap's host discovery feature: [Nmap Manual - host discovery](https://nmap.org/book/man-host-discovery.html)
 {{< /alert >}}
 
 ```bash

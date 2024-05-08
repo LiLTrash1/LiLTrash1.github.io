@@ -67,6 +67,7 @@ Fix for IP issue:
 *10.0.0.0/8 172.16.0.0/12 192.168.0.0/16
 *2001::/64
 ```
+3. If the windows vagrant machine isn't working try the command: `vagrant up win2k8`
 ## 6. Setting up OWASP Juice Shop website
 - On the Kali Linux VM terminal:
 ```bash
@@ -89,6 +90,9 @@ This will contain pre-made Vbox machines which needs to be connected to the lab 
 - VM Box > New > Expert Mode > Name: OWASP BWA > Type: Linux > Memory: 1024 MB > Hard Disk Selector add: OWASP Broken Web Apps-cl1.vmdk > Choose > Finish
 - Click on Settings of OWASP Web > Network > Adapter 1 > Attached to: Internal Network > Name: PentestNet > OK 
 - Login : root:owaspbwa
+
+Here is what directing to the broken OWASP on a web browser should look like:
+![OWASP-BWA](OWASP-BWA.png)
 
 This was it for this walkthrough on how to install and setuping up multiple virtual machines and having them connected to a private network for testing, there is an extended section to setup an environment for **advanced hacking techniques** but will be covered in a later part. Next I will be covering passive information-gather, one of the most important step to a great attack. 
 

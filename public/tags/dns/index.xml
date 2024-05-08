@@ -14,8 +14,8 @@
       <pubDate>Tue, 09 Apr 2024 10:32:25 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</guid>
-      <description>Scratching the surface of the vast world of active recon, exploring tools which give juicy information such as nmap, metasploit, netdiscover and more.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/netdiscover-demo.png" />
+      <description>Scratching the surface of the vast world of active recon, exploring tools which provide juicy information such as nmap, metasploit, netdiscover and more.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/featured.jpg" />
     </item>
     
   </channel>

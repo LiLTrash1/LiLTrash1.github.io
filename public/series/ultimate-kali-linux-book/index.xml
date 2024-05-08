@@ -7,15 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 Valentin</copyright>
-    <lastBuildDate>Tue, 09 Apr 2024 10:32:25 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/ultimate-kali-linux-book/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 Apr 2024 12:22:20 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/ultimate-kali-linux-book/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Part 4 Performing Vulnerability Assessments</title>
+      <link>http://localhost:1313/posts/part-4-performing-vulnerability-assessments/</link>
+      <pubDate>Fri, 26 Apr 2024 12:22:20 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-4-performing-vulnerability-assessments/</guid>
+      <description>Ever wondered what would be an effective way to find vulnerabilities within your organisational systems with ease﹖ Well in this section I will be covering vulnerability scanners for overall systems and websites which provide amazing reports within minutes!</description>
+      
+    </item>
+    
     <item>
       <title>Part 3 Exploring Active Reconnaissance Techniques</title>
       <link>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</link>
       <pubDate>Tue, 09 Apr 2024 10:32:25 +0000</pubDate>
       
       <guid>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</guid>
-      <description>Scratching the surface of the vast world of active recon, exploring tools which give juicy information such as nmap, metasploit, netdiscover and more.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/netdiscover-demo.png" />
+      <description>Scratching the surface of the vast world of active recon, exploring tools which provide juicy information such as nmap, metasploit, netdiscover and more.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/featured.jpg" />
     </item>
     
     <item>
