@@ -15,7 +15,7 @@
       
       <guid>http://localhost:1313/posts/part-4-performing-vulnerability-assessments/</guid>
       <description>Ever wondered what would be an effective way to find vulnerabilities within your organisational systems with ease﹖ Well in this section I will be covering vulnerability scanners for overall systems and websites which provide amazing reports within minutes!</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-4-performing-vulnerability-assessments/featured.jpg" />
     </item>
     
     <item>
