@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 Valentin</copyright>
-    <lastBuildDate>Fri, 26 Apr 2024 12:22:20 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 May 2024 09:09:02 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Part 5 Understanding Reverse and Binding Shell</title>
+      <link>http://localhost:1313/posts/chapter-5-understanding-reverse-and-binding-shell/</link>
+      <pubDate>Thu, 16 May 2024 09:09:02 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/chapter-5-understanding-reverse-and-binding-shell/</guid>
+      <description>Hey it&amp;rsquo;s me again , I know you&amp;rsquo;ve been missing me and I have to same to you as well.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/chapter-5-understanding-reverse-and-binding-shell/featured.jpg" />
+    </item>
+    
     <item>
       <title>Part 4 Performing Vulnerability Assessments</title>
       <link>http://localhost:1313/posts/part-4-performing-vulnerability-assessments/</link>

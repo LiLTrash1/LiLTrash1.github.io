@@ -1,0 +1,6 @@
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "Image" }}
+{{ $width := .Get "width" | default "auto" }}
+{{ $height := .Get "height" | default "auto" }}
+
+<img src="{{ $src }}" alt="{{ $alt }}" style="width: {{ $width }}; height: {{ $height }};">
