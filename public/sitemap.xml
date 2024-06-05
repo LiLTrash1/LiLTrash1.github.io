@@ -9,6 +9,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/posts/chapter-5-understanding-reverse-and-binding-shell/</loc>
+    <lastmod>2024-05-22T09:09:02+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/part-4-performing-vulnerability-assessments/</loc>
     <lastmod>2024-04-26T12:22:20+00:00</lastmod>
     <changefreq>daily</changefreq>

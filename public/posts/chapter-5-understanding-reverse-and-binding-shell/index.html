@@ -64,8 +64,8 @@
 <meta property="og:description" content="Hey it&rsquo;s me again , I know you&rsquo;ve been missing me and I have to same to you as well." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/posts/chapter-5-understanding-reverse-and-binding-shell/" /><meta property="og:image" content="http://localhost:1313/posts/chapter-5-understanding-reverse-and-binding-shell/featured.jpg" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-05-16T09:09:02+00:00" />
-<meta property="article:modified_time" content="2024-05-16T09:09:02+00:00" />
+<meta property="article:published_time" content="2024-05-22T09:09:02+00:00" />
+<meta property="article:modified_time" content="2024-05-22T09:09:02+00:00" />
 <meta property="og:see_also" content="http://localhost:1313/posts/part-4-performing-vulnerability-assessments/" /><meta property="og:see_also" content="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/" /><meta property="og:see_also" content="http://localhost:1313/posts/part-2-reconnaissance-and-footprint/" /><meta property="og:see_also" content="http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/" />
 
 
@@ -90,15 +90,15 @@
       "name": "Valentin"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-05-16T09:09:02\u002b00:00",
-    "datePublished": "2024-05-16T09:09:02\u002b00:00",
+    "dateCreated": "2024-05-22T09:09:02\u002b00:00",
+    "datePublished": "2024-05-22T09:09:02\u002b00:00",
     
-    "dateModified": "2024-05-16T09:09:02\u002b00:00",
+    "dateModified": "2024-05-22T09:09:02\u002b00:00",
     
     "keywords": ["Networking","Shells"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1075"
+    "wordCount": "1064"
   }]
   </script>
 
@@ -442,7 +442,7 @@
 <div class="flex flex-row flex-wrap items-center">
   
   
-  <time datetime="2024-05-16 09:09:02 &#43;0000 UTC">16 May, 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+  <time datetime="2024-05-22 09:09:02 &#43;0000 UTC">22 May, 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
   
 
   
@@ -708,7 +708,7 @@
 
         <div class="article-content max-w-prose mb-20">
           <p>Hey it&rsquo;s me again  , I know you&rsquo;ve been missing me and I have to same to you as well. Time has changed in my life for the better, I&rsquo;ve met the competitive hacking team at another close by University and would love to learn from them as they&rsquo;re seniors in the field of CTF. I want to be by their side and learn from them to grow as a person and a professional penetration tester.</p>
-<p>I&rsquo;ve also found a job as an assistant at a college which has amazing architecture, truly wonderful to look at. I will use the funds to help me with travels for Uni, lunch and future projects that you might see on this blog so stay tuned. (^・ω・^ )</p>
+<p>I&rsquo;ve also found a job at a college which has amazing architecture, truly wonderful to look at. I will use the funds to help me with travels for Uni, lunch and future projects that you might see on this blog so stay tuned. (^・ω・^ )</p>
 <p>Anyways, enough of a life update lets talk Networking and Shells! I will be exploring <strong>Netcat</strong> to create connections between my Kali machine and a victim Windows machine. Will also be going over <strong>Anti-malware evasion techniques</strong> to reduce Virustotal scores when scanning payloads created using scripts. And finally test out my wireless adapter that I got for cheap for packet injection and Monitor mode compatibility with <strong>Aireplay-ng</strong>.</p>
 <p>This ones a short one guys so I&rsquo;ll give it my best, I know I&rsquo;m only using scripts and pre-made tools yet and not reversing engineering yet but put a bit of trust in me. I have a small flame inside of me, waiting for small chips of wood to be thrown inside to grow bigger into a roaring flame to not only light up my path in dark times but also for others I care about around me.</p>
 
@@ -723,7 +723,7 @@
     </span>        
     
 </h2>
-<p>A <strong>reverse shell</strong> is a one way connection from the victims computer to an attackers where they would be able to perform remote code execution or monitor for the victims behaviour, keystrokes, screen sharing and more.</p>
+<p>A <strong>reverse shell</strong> is a one way connection from the victim -&gt; attacker, from there they would be able to perform remote code execution or monitor for the victims behaviour, keystrokes, screen sharing and more.</p>
 <p>A <strong>binding shell</strong> uses inbound firewall rules meaning that the connection originates from the victim -&gt; attacker.</p>
 
 
@@ -1084,8 +1084,7 @@ Doesn&rsquo;t even lower it by much 😭😭</p>
     </figure>
   
 
-
-(Right-click &gt; Open Image in New Tab)</p>
+</p>
 
 
 <h3 class="relative group">3.1 Different types of Adaptor Modes 
