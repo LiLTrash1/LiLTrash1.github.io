@@ -7,15 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2024 Valentin</copyright>
-    <lastBuildDate>Wed, 22 May 2024 09:09:02 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 11 Jun 2024 06:29:21 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Part 6 All on Networking Penetration Baby</title>
+      <link>http://localhost:1313/posts/part-6-all-on-networking-penetration-baby/</link>
+      <pubDate>Tue, 11 Jun 2024 06:29:21 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-6-all-on-networking-penetration-baby/</guid>
+      <description>Another sunny day here down the sea front, slight morning breeze, have a runny nose and sunsets are starting to look purple which are quite the site.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-6-all-on-networking-penetration-baby/featured.jpg" />
+    </item>
+    
     <item>
       <title>Part 5 Understanding Reverse and Binding Shell</title>
-      <link>http://localhost:1313/posts/chapter-5-understanding-reverse-and-binding-shell/</link>
+      <link>http://localhost:1313/posts/part-5-understanding-reverse-and-binding-shell/</link>
       <pubDate>Wed, 22 May 2024 09:09:02 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/chapter-5-understanding-reverse-and-binding-shell/</guid>
+      <guid>http://localhost:1313/posts/part-5-understanding-reverse-and-binding-shell/</guid>
       <description>Hey it&amp;rsquo;s me again , I know you&amp;rsquo;ve been missing me and I have to same to you as well.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/chapter-5-understanding-reverse-and-binding-shell/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-5-understanding-reverse-and-binding-shell/featured.jpg" />
     </item>
     
     <item>
