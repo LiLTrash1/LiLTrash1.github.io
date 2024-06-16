@@ -53,4 +53,6 @@ I forget my plat and soon see it in the machine room for it to be eaten, I don't
 
 On the drive back I screamed, what is this feeling, my chest hurts, I can't think, I don't want to die I want to live.
 
+![alt text](20240615_180207.png)
+
 https://open.spotify.com/track/5awii6NgEPbGSQSCiyErCp?si=5b9c78aa54654a71
