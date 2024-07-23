@@ -49,10 +49,12 @@ She is still sitting at the table, oh no, did I do something stupid, did she see
 
 I put my glasses back and walk slowly back, I can't help but look at her focused on some papers straight after break. She is hard working, maybe for her family, she struggles with a lot of things like me. I try to understand.
 
-I forget my plat and soon see it in the machine room for it to be eaten, I don't want it do end, I don't want it to die, I don't want to forget but I let go and take a picture to remember, the plate that I played with during the heavy conversations helped me distract myself for a short period. It looked like a painting.
+I forget my plate and soon see it in the machine room for it to be eaten, I don't want it do end, I don't want it to die, I don't want to forget but I let go and take a picture to remember, the plate that I played with during the heavy conversations helped me distract myself for a short period. It looked like a painting.
 
 On the drive back I screamed, what is this feeling, my chest hurts, I can't think, I don't want to die I want to live.
 
 ![alt text](20240615_180207.png)
 
 https://open.spotify.com/track/5awii6NgEPbGSQSCiyErCp?si=5b9c78aa54654a71
+
+**Disclaimer** *: This blog post is a work of fiction. Names, characters, businesses, places, events, and incidents are either the products of the author's imagination or used in a fictitious manner. Any resemblance to actual persons, living or dead, or actual events is purely coincidental.*

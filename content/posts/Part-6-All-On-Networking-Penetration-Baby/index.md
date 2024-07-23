@@ -3,7 +3,7 @@ title: "Part 6 All on Networking Penetration Baby"
 date: 2024-06-11T06:29:21Z
 draft: false
 categories: ["Walkthrough"]
-tags: ["Networking", ""]
+tags: ["Networking", "Password-Attacks"]
 series: ["Ultimate-Kali-Linux-Book"]
 series_order: 6
 ---

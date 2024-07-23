@@ -15,7 +15,7 @@
       
       <guid>http://localhost:1313/posts/yap-series/16-06-2024-love/</guid>
       <description>Hello friend,</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/yap-series/16-06-2024-love/Featured.jpg" />
     </item>
     
   </channel>
