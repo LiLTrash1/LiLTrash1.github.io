@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>All-in-One on LiLTrash&#39;s blog</title>
-    <link>//localhost:1313/categories/all-in-one/</link>
-    <description>Recent content in All-in-One on LiLTrash&#39;s blog</description>
+    <title>All-in-One on Val&#39;s blog</title>
+    <link>https://liltrash1.github.io/categories/all-in-one/</link>
+    <description>Recent content in All-in-One on Val&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2024 LiLTrash</copyright>
-    <atom:link href="//localhost:1313/categories/all-in-one/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2024 Valentin</copyright>
+    <lastBuildDate>Sun, 31 Mar 2024 08:35:25 +0000</lastBuildDate><atom:link href="https://liltrash1.github.io/categories/all-in-one/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>All on VPN</title>
+      <link>https://liltrash1.github.io/all-in-one/all-on-vpn/</link>
+      <pubDate>Sun, 31 Mar 2024 08:35:25 +0000</pubDate>
+      
+      <guid>https://liltrash1.github.io/all-in-one/all-on-vpn/</guid>
+      <description>1.</description>
+      
+    </item>
+    
+    <item>
+      <title>All-on Proxies</title>
+      <link>https://liltrash1.github.io/all-in-one/all-on-proxies/</link>
+      <pubDate>Mon, 25 Mar 2024 18:24:06 +0000</pubDate>
+      
+      <guid>https://liltrash1.github.io/all-in-one/all-on-proxies/</guid>
+      <description>1.</description>
+      
+    </item>
+    
   </channel>
 </rss>

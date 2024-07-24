@@ -30,8 +30,8 @@ homepageImage = "img/SANY0234.JPG"
 
 [article]
 showDate = true
-showViews = false
-showLikes = false
+showViews = true
+showLikes = true
 showDateOnlyInArticle = false
 showDateUpdated = true
 showAuthor = true
@@ -40,24 +40,24 @@ layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
 showBreadcrumbs = false
 showDraftLabel = true
-showEdit = false
+showEdit = true
 editAppendPath = true
 seriesOpened = false
 showHeadingAnchors = true
 showPagination = true
-invertPagination = false
+invertPagination = true
 showReadingTime = true
 showTableOfContents = true
 showTaxonomies = true
-showAuthorsBadges = false
-showWordCount = false
-showZenMode = false
+showAuthorsBadges = true
+showWordCount = true
+showZenMode = true
 
 [list]
-showHero = false
+showHero = true
 layoutBackgroundBlur = true
 layoutBackgroundHeaderSpace = true
-showBreadcrumbs = false
+showBreadcrumbs = true
 showSummary = true
 showViews = false
 showLikes = false
