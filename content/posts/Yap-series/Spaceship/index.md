@@ -23,5 +23,16 @@ After the long day of working the Rabbit and Storm grouped up at the end of the 
 
 ![Rabbit & Frog](Rabit&frgo-1.png)
 
+After the encounter he decided to ask that girls instagram or snapchat however I was told to leave early by one of the managers but I stayed longer.
+
+On the drive back the White Rabbit decided to go to his good pal Black Rabbit's house to check up on him, 
+
+"It has been such a long time bruv." the Black Rabbit says. 
+
+"Yeah it has wanted to check up on you and everything." The White rabbit said with nervousness.
+
+"Come in I have a little present for you it's a spaceship." The Black Rabbit offered to come.
+
+The Black Rabbit is well known for is trickery spells and dangerous drugs around the neighbehood. W.Rabbit got drunk here for the first time and passed out which meant he had to be hostpitalised. W.Rabbit goes inside B.Rabbit's room and sees a pill of drugs. 
 
 getting caydens vape
