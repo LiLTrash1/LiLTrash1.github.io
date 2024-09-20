@@ -33,6 +33,10 @@ On the drive back the White Rabbit decided to go to his good pal Black Rabbit's 
 
 "Come in I have a little present for you it's a spaceship." The Black Rabbit offered to come.
 
-The Black Rabbit is well known for is trickery spells and dangerous drugs around the neighbehood. W.Rabbit got drunk here for the first time and passed out which meant he had to be hostpitalised. W.Rabbit goes inside B.Rabbit's room and sees a pill of drugs. 
+The Black Rabbit is well known for is trickery spells and dangerous candies around the neighbehood. W.Rabbit got drunk here for the first time and passed out which meant he had to be hostpitalised. W.Rabbit goes inside B.Rabbit's room and sees a pill of candies.
+
+B.Rabbit hands over a small device which had a tube like shape small enough to hold, it had a small vessel to hold liquids. It was blue and had a cookie bite mark on the tip where you were supposed to put your mouth and inhale, this was a special spaceship as it had an option to switch between two flavours.
+
+After hitting it, W.Rabbit and B.Rabbit decides to go out for a walk
 
 getting caydens vape
