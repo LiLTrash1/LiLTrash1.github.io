@@ -37,6 +37,28 @@ The Black Rabbit is well known for is trickery spells and dangerous candies arou
 
 B.Rabbit hands over a small device which had a tube like shape small enough to hold, it had a small vessel to hold liquids. It was blue and had a cookie bite mark on the tip where you were supposed to put your mouth and inhale, this was a special spaceship as it had an option to switch between two flavours.
 
-After hitting it, W.Rabbit and B.Rabbit decides to go out for a walk
+After hitting it, W.Rabbit and B.Rabbit decides to go out for a walk outside for a nice walk out with the spaceship in pocket. They pack everything they need and set off without anything forgotten. They were best buds since childhood and love talking shit down the mic which angers everyone on the other side.
 
-getting caydens vape
+![alt text](Cayden-outside.png)
+
+They go out on adventures:
+
+![alt text](Outside-cayden-ergot.png)
+
+![alt text](OUtside-cayden-two-plants.png)
+
+After the day out they return and W.Rabbit then returns home and then end the day with a prayer to the shrine.
+
+![alt text](Shrine.png)
+
+
+Conclusion:
+
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0sTjyzgd2K5htQpU8ienNe?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+This ones a short one, thank you for reading I really appreaciate who you might be. My writing has improved so much and I feel life has become much bigger than it was in december when depression kicks in and you're inside all the time, Now I'm looking forward to it since there will be girls and lots to do. Just had my first date today (20/09/24). It was great and an amazing feeling to be alive for, love is in the air.
+
+If you play the songs I put out this will enhance your experience with the reading, I hand pick these to match the vibe of the post so stay tune to my instagram.
+
+This ones a short one but make sure to follow me on all social as I mostly active on Snapchat n Instagram so I would love to hear what you would like to be written about on the story. I leave you guys to it then thanks for tunning in to this intergalactic blog from this corner of the internet <33 ❤️
+
+content/posts/Yap-series/Spaceship/Girl-koala.jpg
