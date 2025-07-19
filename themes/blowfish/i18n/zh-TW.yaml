@@ -1,5 +1,5 @@
 global:
-  language: "ZH-TW"
+  language: "繁體中文"
 
 article:
   anchor_label: "定位點"
@@ -52,6 +52,7 @@ search:
 sharing:
   email: "以電子郵件發送"
   facebook: "分享到 Facebook"
+  line: "分享到 LINE"
   linkedin: "分享到 LinkedIn"
   pinterest: "釘到 Pinterest"
   reddit: "發送到 Reddit"

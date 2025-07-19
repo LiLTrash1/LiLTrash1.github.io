@@ -16,10 +16,12 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2.6.0
+        uses: peaceiris/actions-hugo@v3.0.0
         with:
           hugo-version: "latest"
 
       - name: Build
         working-directory: ./exampleSite
-        run: hugo --minify --themesDir ../.. --baseURL https://nunocoracao.github.io/blowfish/
+        run:
+          hugo --minify --themesDir ../.. --baseURL
+          https://nunocoracao.github.io/blowfish/
