@@ -2,119 +2,119 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Val&#39;s blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://example.org/tags/</link>
     <description>Recent content in Tags on Val&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Valentin</copyright>
-    <lastBuildDate>Fri, 19 Jul 2024 07:17:09 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Jul 2024 07:17:09 +0000</lastBuildDate><atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Love</title>
-      <link>http://localhost:1313/tags/love/</link>
+      <link>https://example.org/tags/love/</link>
       <pubDate>Fri, 19 Jul 2024 07:17:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/love/</guid>
+      <guid>https://example.org/tags/love/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Networking</title>
-      <link>http://localhost:1313/tags/networking/</link>
+      <link>https://example.org/tags/networking/</link>
       <pubDate>Fri, 19 Jul 2024 07:17:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/networking/</guid>
+      <guid>https://example.org/tags/networking/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Yapping-Journaling</title>
-      <link>http://localhost:1313/tags/yapping-journaling/</link>
+      <link>https://example.org/tags/yapping-journaling/</link>
       <pubDate>Fri, 19 Jul 2024 07:17:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/yapping-journaling/</guid>
+      <guid>https://example.org/tags/yapping-journaling/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Password-Attacks</title>
-      <link>http://localhost:1313/tags/password-attacks/</link>
+      <link>https://example.org/tags/password-attacks/</link>
       <pubDate>Tue, 11 Jun 2024 06:29:21 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/password-attacks/</guid>
+      <guid>https://example.org/tags/password-attacks/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Shells</title>
-      <link>http://localhost:1313/tags/shells/</link>
+      <link>https://example.org/tags/shells/</link>
       <pubDate>Wed, 22 May 2024 09:09:02 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/shells/</guid>
+      <guid>https://example.org/tags/shells/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>OSINT</title>
-      <link>http://localhost:1313/tags/osint/</link>
+      <link>https://example.org/tags/osint/</link>
       <pubDate>Fri, 26 Apr 2024 12:22:20 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/osint/</guid>
+      <guid>https://example.org/tags/osint/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Vulnerability</title>
-      <link>http://localhost:1313/tags/vulnerability/</link>
+      <link>https://example.org/tags/vulnerability/</link>
       <pubDate>Fri, 26 Apr 2024 12:22:20 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/vulnerability/</guid>
+      <guid>https://example.org/tags/vulnerability/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>DNS</title>
-      <link>http://localhost:1313/tags/dns/</link>
+      <link>https://example.org/tags/dns/</link>
       <pubDate>Tue, 09 Apr 2024 10:32:25 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/dns/</guid>
+      <guid>https://example.org/tags/dns/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Anonymity</title>
-      <link>http://localhost:1313/tags/anonymity/</link>
+      <link>https://example.org/tags/anonymity/</link>
       <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/anonymity/</guid>
+      <guid>https://example.org/tags/anonymity/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Lab</title>
-      <link>http://localhost:1313/tags/lab/</link>
+      <link>https://example.org/tags/lab/</link>
       <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/lab/</guid>
+      <guid>https://example.org/tags/lab/</guid>
       <description></description>
       
     </item>
     
     <item>
       <title>Pentesting</title>
-      <link>http://localhost:1313/tags/pentesting/</link>
+      <link>https://example.org/tags/pentesting/</link>
       <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/pentesting/</guid>
+      <guid>https://example.org/tags/pentesting/</guid>
       <description></description>
       
     </item>

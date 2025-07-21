@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lab on Val&#39;s blog</title>
-    <link>http://localhost:1313/tags/lab/</link>
+    <link>https://example.org/tags/lab/</link>
     <description>Recent content in Lab on Val&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Valentin</copyright>
-    <lastBuildDate>Sun, 17 Mar 2024 20:32:22 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/lab/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Mar 2024 20:32:22 +0000</lastBuildDate><atom:link href="https://example.org/tags/lab/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Part 1 Building a Penetesting Lab</title>
-      <link>http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/</link>
+      <link>https://example.org/posts/part-1-buidling-a-penetration-testing-labs/</link>
       <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/</guid>
+      <guid>https://example.org/posts/part-1-buidling-a-penetration-testing-labs/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/featured.png" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://example.org/posts/part-1-buidling-a-penetration-testing-labs/featured.png" />
     </item>
     
   </channel>
