@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shells on Val&#39;s blog</title>
-    <link>https://example.org/tags/shells/</link>
+    <link>http://localhost:1313/tags/shells/</link>
     <description>Recent content in Shells on Val&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 Valentin</copyright>
-    <lastBuildDate>Wed, 22 May 2024 09:09:02 +0000</lastBuildDate><atom:link href="https://example.org/tags/shells/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 22 May 2024 09:09:02 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/shells/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Part 5 Understanding Reverse and Binding Shell</title>
-      <link>https://example.org/posts/part-5-understanding-reverse-and-binding-shell/</link>
+      <link>http://localhost:1313/posts/part-5-understanding-reverse-and-binding-shell/</link>
       <pubDate>Wed, 22 May 2024 09:09:02 +0000</pubDate>
       
-      <guid>https://example.org/posts/part-5-understanding-reverse-and-binding-shell/</guid>
+      <guid>http://localhost:1313/posts/part-5-understanding-reverse-and-binding-shell/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="https://example.org/posts/part-5-understanding-reverse-and-binding-shell/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-5-understanding-reverse-and-binding-shell/featured.jpg" />
     </item>
     
   </channel>

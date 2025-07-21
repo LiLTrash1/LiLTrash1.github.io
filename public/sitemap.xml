@@ -3,61 +3,61 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://example.org/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-07-19T07:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/part-7-advanced-network-penetration-testing-post-exploitation/</loc>
+    <loc>http://localhost:1313/posts/part-7-advanced-network-penetration-testing-post-exploitation/</loc>
     <lastmod>2024-07-19T07:17:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/part-6-all-on-networking-penetration-baby/</loc>
+    <loc>http://localhost:1313/posts/part-6-all-on-networking-penetration-baby/</loc>
     <lastmod>2024-06-11T06:29:21+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/part-5-understanding-reverse-and-binding-shell/</loc>
+    <loc>http://localhost:1313/posts/part-5-understanding-reverse-and-binding-shell/</loc>
     <lastmod>2024-05-22T09:09:02+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/part-4-performing-vulnerability-assessments/</loc>
+    <loc>http://localhost:1313/posts/part-4-performing-vulnerability-assessments/</loc>
     <lastmod>2024-04-26T12:22:20+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/part-3-exploring-active-reconnaissance-techniques/</loc>
+    <loc>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</loc>
     <lastmod>2024-04-09T10:32:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/all-in-one/</loc>
+    <loc>http://localhost:1313/all-in-one/</loc>
     <lastmod>2024-03-31T08:35:25+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/part-2-reconnaissance-and-footprint/</loc>
+    <loc>http://localhost:1313/posts/part-2-reconnaissance-and-footprint/</loc>
     <lastmod>2024-03-24T19:14:23+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/part-1-buidling-a-penetration-testing-labs/</loc>
+    <loc>http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/</loc>
     <lastmod>2024-03-17T20:32:22+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://example.org/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2020-01-01T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
