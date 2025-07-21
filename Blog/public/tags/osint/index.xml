@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OSINT on Val&#39;s blog</title>
+    <link>http://localhost:1313/tags/osint/</link>
+    <description>Recent content in OSINT on Val&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Valentin</copyright>
+    <lastBuildDate>Fri, 26 Apr 2024 12:22:20 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/osint/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Part 4 Performing Vulnerability Assessments</title>
+      <link>http://localhost:1313/posts/part-4-performing-vulnerability-assessments/</link>
+      <pubDate>Fri, 26 Apr 2024 12:22:20 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-4-performing-vulnerability-assessments/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-4-performing-vulnerability-assessments/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Part 3 Exploring Active Reconnaissance Techniques</title>
+      <link>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</link>
+      <pubDate>Tue, 09 Apr 2024 10:32:25 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Part 2 Reconnaissance and Footprint</title>
+      <link>http://localhost:1313/posts/part-2-reconnaissance-and-footprint/</link>
+      <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-2-reconnaissance-and-footprint/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-2-reconnaissance-and-footprint/feature.png" />
+    </item>
+    
+  </channel>
+</rss>

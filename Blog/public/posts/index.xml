@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Val&#39;s blog</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Blog on Val&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 Valentin</copyright>
+    <lastBuildDate>Wed, 01 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Part 7 Advanced Network Penetration Testing Post Exploitation</title>
+      <link>http://localhost:1313/posts/part-7-advanced-network-penetration-testing-post-exploitation/</link>
+      <pubDate>Fri, 19 Jul 2024 07:17:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-7-advanced-network-penetration-testing-post-exploitation/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-7-advanced-network-penetration-testing-post-exploitation/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Part 6 All on Networking Penetration Baby</title>
+      <link>http://localhost:1313/posts/part-6-all-on-networking-penetration-baby/</link>
+      <pubDate>Tue, 11 Jun 2024 06:29:21 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-6-all-on-networking-penetration-baby/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-6-all-on-networking-penetration-baby/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Part 5 Understanding Reverse and Binding Shell</title>
+      <link>http://localhost:1313/posts/part-5-understanding-reverse-and-binding-shell/</link>
+      <pubDate>Wed, 22 May 2024 09:09:02 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-5-understanding-reverse-and-binding-shell/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-5-understanding-reverse-and-binding-shell/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Part 4 Performing Vulnerability Assessments</title>
+      <link>http://localhost:1313/posts/part-4-performing-vulnerability-assessments/</link>
+      <pubDate>Fri, 26 Apr 2024 12:22:20 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-4-performing-vulnerability-assessments/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-4-performing-vulnerability-assessments/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Part 3 Exploring Active Reconnaissance Techniques</title>
+      <link>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</link>
+      <pubDate>Tue, 09 Apr 2024 10:32:25 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-3-exploring-active-reconnaissance-techniques/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Part 2 Reconnaissance and Footprint</title>
+      <link>http://localhost:1313/posts/part-2-reconnaissance-and-footprint/</link>
+      <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-2-reconnaissance-and-footprint/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-2-reconnaissance-and-footprint/feature.png" />
+    </item>
+    
+    <item>
+      <title>Part 1 Building a Penetesting Lab</title>
+      <link>http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/</link>
+      <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/part-1-buidling-a-penetration-testing-labs/featured.png" />
+    </item>
+    
+  </channel>
+</rss>
