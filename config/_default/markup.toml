@@ -16,5 +16,7 @@
   noClasses = false
 
 [tableOfContents]
+  [markup.tableOfContents]
   startLevel = 2
+  ordered = true
   endLevel = 4

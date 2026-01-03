@@ -6,8 +6,18 @@
     <description>Recent content in Series on Val&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <copyright>© 2025 Valentin</copyright>
-    <lastBuildDate>Fri, 19 Jul 2024 07:17:09 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2026 Valentin B</copyright>
+    <lastBuildDate>Sat, 27 Dec 2025 18:11:18 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Learn-Computer-Forensics</title>
+      <link>http://localhost:1313/series/learn-computer-forensics/</link>
+      <pubDate>Sat, 27 Dec 2025 18:11:18 +0000</pubDate>
+      
+      <guid>http://localhost:1313/series/learn-computer-forensics/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Ultimate-Kali-Linux-Book</title>

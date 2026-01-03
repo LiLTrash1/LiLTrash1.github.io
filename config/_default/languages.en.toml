@@ -14,7 +14,7 @@ title = "Val's blog"
 #   copyright = "Copy, _right?_ :thinking_face:"
 
  [params.author]
-   name = "Valentin"
+   name = "Valentin B"
    image = "img/lain-bear-icon.jpg"
    headline = "Welcome to my blog"
    bio = "Focusing on mastering penetration testing and digital forensics"
