@@ -6,6 +6,7 @@ categories: ["Book"]
 tags: ["Hardware", "Hacking", "Series"]
 series: ["Learn-Computer-Forensics"]
 toc: true 
+type: "list"
 ---
 # 1. Introduction to book
 
