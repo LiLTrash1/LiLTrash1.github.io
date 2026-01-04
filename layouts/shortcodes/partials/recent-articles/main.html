@@ -1,0 +1,20 @@
+<section class="mt-10">
+  {{ $recentItems := .Site.Params.homepage.showRecentItems | default 5 }}
+  
+  {{/* We change .Site.RegularPages to .Site.Sections here */}}
+  {{ range first $recentItems .Site.Sections }}
+    <div class="relative flex flex-col py-8 first:pt-0 last:pb-0 md:flex-row">
+      <div class="flex-1">
+        <a class="flex items-center text-xl font-bold decoration-primary-500 hover:underline hover:underline-offset-4" href="{{ .Permalink }}">
+          {{ .Title }}
+        </a>
+        <div class="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+          {{ .Date.Format "January 2, 2006" }}
+        </div>
+        <div class="py-1 prose dark:prose-invert">
+          {{ .Summary | plainify | truncate 200 }}
+        </div>
+      </div>
+    </div>
+  {{ end }}
+</section>
