@@ -16,27 +16,7 @@
       
       <guid>http://localhost:1313/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>Part 3 Exploring Active Reconnaissance Techniques</title>
-      <link>http://localhost:1313/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/</link>
-      <pubDate>Tue, 09 Apr 2024 10:32:25 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>Part 2 Reconnaissance and Footprint</title>
-      <link>http://localhost:1313/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/</link>
-      <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/featured.jpg" />
     </item>
     
   </channel>

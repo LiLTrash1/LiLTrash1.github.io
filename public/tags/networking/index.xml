@@ -7,36 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Valentin B</copyright>
-    <lastBuildDate>Fri, 19 Jul 2024 07:17:09 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/networking/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Part 7 Advanced Network Penetration Testing Post Exploitation</title>
-      <link>http://localhost:1313/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/</link>
-      <pubDate>Fri, 19 Jul 2024 07:17:09 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/featured.jpg" />
-    </item>
-    
-    <item>
-      <title>Part 6 All on Networking Penetration Baby</title>
-      <link>http://localhost:1313/posts/ultimate-kali-linux-book/part-6-all-on-networking-penetration-baby/</link>
-      <pubDate>Tue, 11 Jun 2024 06:29:21 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/ultimate-kali-linux-book/part-6-all-on-networking-penetration-baby/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ultimate-kali-linux-book/part-6-all-on-networking-penetration-baby/featured.jpg" />
-    </item>
+    <lastBuildDate>Wed, 22 May 2024 09:09:02 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/networking/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Part 5 Understanding Reverse and Binding Shell</title>
-      <link>http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/</link>
+      <link>http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shells/</link>
       <pubDate>Wed, 22 May 2024 09:09:02 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/</guid>
+      <guid>http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shells/</guid>
       <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shell/featured.jpg" />
+      
     </item>
     
   </channel>

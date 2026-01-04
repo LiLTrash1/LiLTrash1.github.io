@@ -5,7 +5,7 @@ draft: false
 categories: ["Walkthrough"]
 tags: ["OSINT", "Anonymity"]
 series: ["Ultimate-Kali-Linux-Book"]
-series_order: 3
+series_order: 2
 ---
 Techniques to avoid traces back to identity, browsing the web to collect information on a target and social media account leaks.
 

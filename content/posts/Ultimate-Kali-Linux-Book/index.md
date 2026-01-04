@@ -5,18 +5,13 @@ title: 'Ultimate Kali Linux-Book '
 categories: ["Book"]
 tags: ["Hardware", "Hacking", "Series"]
 series: ["Learn-Computer-Forensics"]
-series_order: 1
 toc: true 
 ---
-## 1. Introduction to book
-Thank you for your patience and understanding. {{<responsive-img src="eye-bat.gif" alt="alt text" width="80px" height="50px" >}}
+# 1. Introduction to book
 
-### 1.1 Introduction
-For this book, I’m diving into the world of digital forensics—the practice of uncovering, analyzing, and interpreting digital evidence to build clear, actionable reports for organizations.
 
-Below, you’ll find the chapters covered in the book, along with my own summaries and takeaways from each section.
 ## 2. Table of Contents
-- [Part 1: Building a Penetration Testing Lab](./part-1-building-a-penetration-testing-lab/)
+- [Part 1: Building a Penetration Testing Lab](./part-1-buidling-a-penetration-testing-lab/)
 - [Part 2: Reconnaissance and Footprinting](./part-2-reconnaissance-and-footprint/)
 - [Part 3: Exploring Active Reconnaissance Techniques](./part-3-exploring-active-reconnaissance-techniques/)
 - [Part 4: Performing Vulnerability Assessments](./part-4-performing-vulnerability-assessments/)

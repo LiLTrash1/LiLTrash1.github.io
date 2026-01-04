@@ -5,14 +5,14 @@ draft: false
 categories: ["Walkthrough"]
 tags: ["Lab", "Pentesting"]
 series: ["Ultimate-Kali-Linux-Book"]
-series_order: 2
+series_order: 1
 ---
 Building virtual machines, installing Kali Linux, Metasploitable 2&3, OWASP web applications and windows machines for advanced testing.
 
 Welcome to the first part of my walkthrough for 'The Ultimate Kali Linux Book' by Glen D. Singh, this is a highly recommended book from Packt which have a reputation of providing top quality content for the IT industry. In this part I will be building multiple lab environments with vulnerable machines which I can utilise to test out different penetration techniques in a safe and legal network.
 ## 1. First lab within VirtualBox
 
-![Lab-settup-1-diagram.drawio](Lab-settup-1-diagram.drawio.png)
+![Lab-settup-1-diagram.drawio](lab-settup-1-diagram.drawio.png)
 The diagram demonstrate the environment for this first network lab where I will be using a popular penetration OS, Kali Linux to test out the different tools that comes within its arsenal. 
 
 For the virtual machine of choice I went with Vbox due to previous experience with the software in the past however, upon research for different types of virtualisation I came across KVM/Qemu which is a fully open-source and a higher frequency of security update with transparent reports whereas Oracle provides security through obscurity. 

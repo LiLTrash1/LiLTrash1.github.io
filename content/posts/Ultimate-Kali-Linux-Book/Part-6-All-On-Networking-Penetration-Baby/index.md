@@ -5,7 +5,7 @@ draft: false
 categories: ["Walkthrough"]
 tags: ["Networking", "Password-Attacks"]
 series: ["Ultimate-Kali-Linux-Book"]
-series_order: 7
+series_order: 6
 ---
 
 Another sunny day here down the sea front, slight morning breeze, have a runny nose and sunsets are starting to look purple which are quite the site. A perfect season to do my CTF training in the morning when the sparrows start to chirp; relax in the afternoon for a bike ride, this will be my routine for the end of my first year of Uni ! Summer here we come.⛅

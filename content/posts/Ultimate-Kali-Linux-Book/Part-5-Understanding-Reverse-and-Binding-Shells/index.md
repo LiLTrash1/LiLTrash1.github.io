@@ -8,11 +8,7 @@ series: ["Ultimate-Kali-Linux-Book"]
 series_order: 5
 ---
 
-Hey it's me again  , I know you've been missing me and I have to same to you as well. Time has changed in my life for the better, I've met the competitive hacking team at another close by University and would love to learn from them as they're seniors in the field of CTF. I want to be by their side and learn from them to grow as a person and a professional penetration tester.
-
-I've also found a job at a college which has amazing architecture, truly wonderful to look at. I will use the funds to help me with travels for Uni, lunch and future projects that you might see on this blog so stay tuned. (^・ω・^ )
-
-Anyways, enough of a life update lets talk Networking and Shells! I will be exploring **Netcat** to create connections between my Kali machine and a victim Windows machine. Will also be going over **Anti-malware evasion techniques** to reduce Virustotal scores when scanning payloads created using scripts. And finally test out my wireless adapter that I got for cheap for packet injection and Monitor mode compatibility with **Aireplay-ng**. 
+Lets talk Networking and Shells! I will be exploring **Netcat** to create connections between my Kali machine and a victim Windows machine. Will also be going over **Anti-malware evasion techniques** to reduce Virustotal scores when scanning payloads created using scripts. And finally test out my wireless adapter that I got for cheap for packet injection and Monitor mode compatibility with **Aireplay-ng**. 
 
 This ones a short one guys so I'll give it my best, I know I'm only using scripts and pre-made tools yet and not reversing engineering yet but put a bit of trust in me. I have a small flame inside of me, waiting for small chips of wood to be thrown inside to grow bigger into a roaring flame to not only light up my path in dark times but also for others I care about around me.
 

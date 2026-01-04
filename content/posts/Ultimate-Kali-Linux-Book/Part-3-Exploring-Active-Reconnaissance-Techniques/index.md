@@ -6,7 +6,7 @@ description: "This is a test description"
 categories: ["Walkthrough"]
 tags: ["OSINT", "DNS"]
 series: ["Ultimate-Kali-Linux-Book"]
-series_order: 4
+series_order: 3
 ---
 Scratching the surface of the vast world of active recon, exploring tools which provide juicy information such as nmap, metasploit, netdiscover and more.
 
