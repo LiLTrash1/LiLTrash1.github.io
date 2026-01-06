@@ -39,6 +39,9 @@ enableEmoji = true
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
+[params]
+  mainSections = ["posts"]
+  
 [related]
   threshold = 0
   toLower = false

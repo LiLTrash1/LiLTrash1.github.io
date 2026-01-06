@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Investigation Process on Val&#39;s blog</title>
+    <link>http://localhost:1313/tags/investigation-process/</link>
+    <description>Recent content in Investigation Process on Val&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Valentin B</copyright>
+    <lastBuildDate>Sun, 28 Dec 2025 10:26:09 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/investigation-process/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Learn Computer Forensices Section 1: Acquiring Evidence</title>
+      <link>http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/chapter-1/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/chapter-1/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/chapter-1/featured.jpeg" />
+    </item>
+    
+  </channel>
+</rss>

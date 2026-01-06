@@ -7,24 +7,114 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Valentin B</copyright>
-    <lastBuildDate>Sat, 27 Dec 2025 18:11:18 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Dec 2025 10:26:09 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Goverment</title>
-      <link>http://localhost:1313/tags/goverment/</link>
-      <pubDate>Sat, 27 Dec 2025 18:11:18 +0000</pubDate>
+      <title>Career &amp; Training</title>
+      <link>http://localhost:1313/tags/career--training/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/goverment/</guid>
+      <guid>http://localhost:1313/tags/career--training/</guid>
       <description></description>
       
     </item>
     
     <item>
-      <title>Hardware</title>
-      <link>http://localhost:1313/tags/hardware/</link>
+      <title>Cybercrime</title>
+      <link>http://localhost:1313/tags/cybercrime/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/cybercrime/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data Acquisition</title>
+      <link>http://localhost:1313/tags/data-acquisition/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/data-acquisition/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Digital Evidence</title>
+      <link>http://localhost:1313/tags/digital-evidence/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/digital-evidence/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Digital Forensics</title>
+      <link>http://localhost:1313/tags/digital-forensics/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/digital-forensics/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Forensic Methodology</title>
+      <link>http://localhost:1313/tags/forensic-methodology/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/forensic-methodology/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Forensic Tools</title>
+      <link>http://localhost:1313/tags/forensic-tools/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/forensic-tools/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Investigation Process</title>
+      <link>http://localhost:1313/tags/investigation-process/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/investigation-process/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Legal Compliance</title>
+      <link>http://localhost:1313/tags/legal-compliance/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/legal-compliance/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Response Kit</title>
+      <link>http://localhost:1313/tags/response-kit/</link>
+      <pubDate>Sun, 28 Dec 2025 10:26:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/response-kit/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>TOC</title>
+      <link>http://localhost:1313/tags/toc/</link>
       <pubDate>Sat, 27 Dec 2025 18:11:18 +0000</pubDate>
       
-      <guid>http://localhost:1313/tags/hardware/</guid>
+      <guid>http://localhost:1313/tags/toc/</guid>
       <description></description>
       
     </item>
@@ -40,11 +130,141 @@
     </item>
     
     <item>
+      <title>Hardware</title>
+      <link>http://localhost:1313/tags/hardware/</link>
+      <pubDate>Fri, 27 Dec 2024 18:11:18 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/hardware/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
       <title>Series</title>
       <link>http://localhost:1313/tags/series/</link>
       <pubDate>Fri, 27 Dec 2024 18:11:18 +0000</pubDate>
       
       <guid>http://localhost:1313/tags/series/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Kali</title>
+      <link>http://localhost:1313/tags/kali/</link>
+      <pubDate>Fri, 19 Jul 2024 07:17:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/kali/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Networking</title>
+      <link>http://localhost:1313/tags/networking/</link>
+      <pubDate>Fri, 19 Jul 2024 07:17:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/networking/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Windows-Exploit</title>
+      <link>http://localhost:1313/tags/windows-exploit/</link>
+      <pubDate>Fri, 19 Jul 2024 07:17:09 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/windows-exploit/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Password-Attacks</title>
+      <link>http://localhost:1313/tags/password-attacks/</link>
+      <pubDate>Tue, 11 Jun 2024 06:29:21 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/password-attacks/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Shells</title>
+      <link>http://localhost:1313/tags/shells/</link>
+      <pubDate>Wed, 22 May 2024 09:09:02 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/shells/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>OSINT</title>
+      <link>http://localhost:1313/tags/osint/</link>
+      <pubDate>Fri, 26 Apr 2024 12:22:20 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/osint/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Vulnerability</title>
+      <link>http://localhost:1313/tags/vulnerability/</link>
+      <pubDate>Fri, 26 Apr 2024 12:22:20 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/vulnerability/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>DNS</title>
+      <link>http://localhost:1313/tags/dns/</link>
+      <pubDate>Tue, 09 Apr 2024 10:32:25 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/dns/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Anonymity</title>
+      <link>http://localhost:1313/tags/anonymity/</link>
+      <pubDate>Sun, 24 Mar 2024 19:14:23 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/anonymity/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Lab</title>
+      <link>http://localhost:1313/tags/lab/</link>
+      <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/lab/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pentesting</title>
+      <link>http://localhost:1313/tags/pentesting/</link>
+      <pubDate>Sun, 17 Mar 2024 20:32:22 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/pentesting/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Goverment</title>
+      <link>http://localhost:1313/tags/goverment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/tags/goverment/</guid>
       <description></description>
       
     </item>

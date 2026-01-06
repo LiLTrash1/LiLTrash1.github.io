@@ -4,7 +4,13 @@
 
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-12-27T18:11:18+00:00</lastmod>
+    <lastmod>2025-12-28T10:26:09+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/learn-computer-forensics-william-oettinger-1st-edition/chapter-1/</loc>
+    <lastmod>2025-12-28T10:26:09+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -21,8 +27,50 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/posts/ultimate-kali-linux-book/part-7-advanced-network-penetration-testing-post-exploitation/</loc>
+    <lastmod>2024-07-19T07:17:09+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/ultimate-kali-linux-book/part-6-all-on-networking-penetration-baby/</loc>
+    <lastmod>2024-06-11T06:29:21+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/ultimate-kali-linux-book/part-5-understanding-reverse-and-binding-shells/</loc>
+    <lastmod>2024-05-22T09:09:02+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/ultimate-kali-linux-book/part-4-performing-vulnerability-assessments/</loc>
+    <lastmod>2024-04-26T12:22:20+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/ultimate-kali-linux-book/part-3-exploring-active-reconnaissance-techniques/</loc>
+    <lastmod>2024-04-09T10:32:25+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/all-in-one/</loc>
     <lastmod>2024-03-31T08:35:25+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/ultimate-kali-linux-book/part-2-reconnaissance-and-footprint/</loc>
+    <lastmod>2024-03-24T19:14:23+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/ultimate-kali-linux-book/part-1-buidling-a-penetration-testing-lab/</loc>
+    <lastmod>2024-03-17T20:32:22+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

@@ -1,5 +1,5 @@
 ---
-title: "Part 6 All on Networking Penetration Baby"
+title: "Kali Linux Part 6: All on Networking Penetration Baby"
 date: 2024-06-11T06:29:21Z
 draft: false
 categories: ["Walkthrough"]

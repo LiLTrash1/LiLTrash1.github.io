@@ -1,5 +1,5 @@
 ---
-title: "Part 5 Understanding Reverse and Binding Shell"
+title: "Kali Linux Part 5: Understanding Reverse and Binding Shell"
 date: 2024-05-22T09:09:02Z
 draft: false
 categories: ["Walkthrough"]
