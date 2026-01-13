@@ -14,3 +14,21 @@ If login page is shown instead of activation wizard setup within the web portal,
 
 {{< responsive-img src="Cat-with-heart-excited.gif" alt="alt text" width="30px" height="30px" >}}
 
+
+{{< alert >}}
+This is an important note!
+{{< /alert >}}
+
+Another sunny day here down the sea front, slight morning breeze, have a runny nose and sunsets are starting to look purple which are quite the site. A perfect season to do my CTF training in the morning when the sparrows start to chirp; relax in the afternoon for a bike ride, this will be my routine for the end of my first year of Uni ! Summer here we come.⛅
+
+Lots of exciting stuff has happened but I'll keep it short:
+
+1. Had a fantastic idea last night for a project which will last a lifetime, a project that will be updated and released on a three-year cycle. It's very ambitious which some may say, impossible, with balancing University, Gym, Bouldering, Best friends, watch/read anime, read and more ! This is just asking for a burnout at this point lol how does he do it ? 
+
+- **Time management**, and seeing how spinning multiple plates is like by seeing how many I can hold one at the time, what happens when I spin one faster than the others? what happens to the balance of it all? How I deal with all plates falling off etc. Truly a worthwhile skill to have which I have been working on for over 2 years now and will reveal more over the future.
+
+2. Have a whole bunch of trips, events and holidays coming up! Lazer tag for end of Uni this Thursday, camping on the 26th, Belgium and more !
+
+3. The house sparrows have grown in numbers this year, it truly brings us a rich garden, I think it may be from the papa and mama bringing children here, it's great for the plants and they're experimenting with how other trees feel around because there's so many! Love to watch them sit to share stuff they've learned, forming communities which help each other against the jaguars(cat) that lurks in the bushes ready to pounce if one left alone, fall in love and form families all outside my bedroom window.
+
+Anyway, enough of a life update and lets talk Networking Penetration baby. This is one of the most important discipline to learn when testing the security of an organisation, understanding how to navigate around a network could expose vulnerable devices which could be leveraged for higher privileges or probed for credentials.

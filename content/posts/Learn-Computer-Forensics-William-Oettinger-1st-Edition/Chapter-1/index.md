@@ -5,7 +5,7 @@ title: 'Learn Computer Forensices Section 1: Acquiring Evidence'
 categories: ["Book"]
 tags: ["Digital Forensics", "Digital Evidence", "Investigation Process", "Forensic Tools", "Forensic Methodology", "Response Kit", "Data Acquisition", "Legal Compliance", "Career & Training", "Cybercrime"]
 series: ["Learn-Computer-Forensics"]
-series_order: 2
+series_order: 1
 
 ---
 
@@ -103,8 +103,9 @@ To become a digital forensics investigator you will need extensive training to a
 - Global Information Assurance Certification (GIAC): https://www.giac.org/certifications
 ## 7.2 Understanding case information and legal issues
 This is the information you get before you power up your workstation to begin investigating which you should ask the following questions:
-- ==What is the nature of the investigation?== Is it a narcotics case, homicide, or employee misconduct?
-- ==What digital evidence do you expect to find at the scene?== Information received may not be accurate where you could be looking for a single laptop but find multiple laptop, desktops, and many mobile phones.
-- ==what are the legal justification?== what is the rationale behind the search? Consent? A search warrant? You need to make sure you understand the limitation being placed on the search which can either be physical or digital limits.
+- _What is the nature of the investigation?_ Is it a narcotics case, homicide, or employee misconduct?
+- What digital evidence do you expect to find at the scene? Information received may not be accurate where you could be looking for a single laptop but find multiple laptop, desktops, and many mobile phones.
+- _what are the legal justification?_ what is the rationale behind the search? Consent? A search warrant? You need to make sure you understand the limitation being placed on the search which can either be physical or digital limits.
 	- Finding relevant artefacts outside the limitation scope will mean you cannot use them as you may face sanctions
-- ==Who are the subjects and suspects?== Depending on your role you may not have any contact with the subjects and suspects involve, but if you do try having a conversation with them to pry for information.
+- _Who are the subjects and suspects?_ Depending on your role you may not have any contact with the subjects and suspects involve, but if you do try having a conversation with them to pry for information.
+

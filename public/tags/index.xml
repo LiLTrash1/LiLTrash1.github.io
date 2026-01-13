@@ -259,15 +259,5 @@
       
     </item>
     
-    <item>
-      <title>Goverment</title>
-      <link>http://localhost:1313/tags/goverment/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/tags/goverment/</guid>
-      <description></description>
-      
-    </item>
-    
   </channel>
 </rss>

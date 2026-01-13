@@ -5,10 +5,10 @@ title: 'William Oettinger - Learn Computer Forensics: Your one-stop guide to sea
 categories: ["Book", "Forensics"]
 tags: ["", "TOC", ]
 series: ["Learn-Computer-Forensics"]
-series_order: 1
+series_order: 0
 toc: true 
 ---
-# 1. Welcome Back
+# 1 Welcome Back
 Hello, and welcome back to my portfolio.
 
 I took a break from my work primarily due to my mental health and some personal matters. During this time, I was also adjusting to new medication that I take to help stabilize my mood. While essential, this medication brought some challenging side effects like drowsiness, fatigue, trouble sleeping, and restlessness that made it difficult to focus and maintain a creative routine. 
@@ -25,6 +25,4 @@ For this book, I’m diving into the world of digital forensics—the practice o
 Below, you’ll find the chapters covered in the book, along with my own summaries and takeaways from each section.
 # 3. Table of Contents
 - [Chapter 1: Acquiring Evidence](./chapter-1/)
-- [Chapter 2: Basics](#chapter-2)
-- [Chapter 3: Advanced](#chapter-3)
-- [All Chapters...](#full-list)
+- [Chapter 2: The Forensic Analysis Process](./chapter-2)
