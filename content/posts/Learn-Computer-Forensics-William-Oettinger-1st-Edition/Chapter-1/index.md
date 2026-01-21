@@ -9,7 +9,7 @@ series_order: 1
 
 ---
 
-# 1. What is Digital Forensics
+# 1 What is Digital Forensics
 In the 21st century where everything in life is connected to an electronic device ranging from doorbells, smartphones, and social media. These all track your digital footprint and creates a profile that follows you around the internet. As a digital forensics investigator your job is to find all available criminal evidence, process it, and present  findings to the finder of facts.
 
 In other words digital forensics is a division of forensics involving the recovery and analysis of data that has been recovered from digital devices.   
