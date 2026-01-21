@@ -8,7 +8,7 @@ series: ["Learn-Computer-Forensics"]
 series_order: 2
 ---
 
-# 1. Introduction
+# 1 Introduction
 In this chapter we will be going through the forensic analysis process which will enable you to conduct an efficient investigation. Without this process you will waste time examining data. It is also important to be familiar with the tools you use as getting valid results are important when deployed. Finally, critical thinking will determine the best investigation or exam method.
 
 The forensic analysis process is made up of five subsets:
